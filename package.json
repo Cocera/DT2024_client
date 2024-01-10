@@ -26,5 +26,10 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "sass": "^1.69.7",
     "vite": "^5.0.8"
-  }
+  },
+  "description": "",
+  "main": "vite.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
