@@ -8,6 +8,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 		domain="dev-r85is3s0gdynccjy.eu.auth0.com"
 		clientId="OTqs67fdnQhgjhJHCNjDXsz15ngesR4D"
 		authorizationParams={{
+			audience: "http://localhost:8080",
 			redirect_uri: window.location.origin + "/profile",
 		}}>
 		<App />
