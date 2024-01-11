@@ -1,5 +1,5 @@
 import React from "react";
-import "./Homepage.scss";
+import "./Home.scss";
 import Nav from "../../components/Nav/Nav";
 import Footer from "../../components/Footer/Footer";
 
