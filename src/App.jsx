@@ -5,10 +5,12 @@ import SignIn from "./pages/SignIn/SignIn";
 import Profile from "./pages/Profile/Profile";
 import Homepage from "./pages/Homepage/Homepage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { ChakraProvider } from '@chakra-ui/react';
 
 function App() {
 	return (
 		<>
+			<ChakraProvider>
 			<Router>
 				<Routes>
 					<Route path="/signin" element={<SignIn />}></Route>
@@ -17,6 +19,7 @@ function App() {
 					{/* <Route path="*" element={<NotFound />}></Route> */}
 				</Routes>
 			</Router>
+			</ChakraProvider>
 		</>
 	);
 }
