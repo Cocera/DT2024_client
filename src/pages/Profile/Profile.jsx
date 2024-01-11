@@ -1,5 +1,6 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import Logout from "../../components/Logout/Logout";
+import GoogleDrivePicker from "../../components/GoogleDrivePicker/GoogleDrivePicker";
 
 const Profile = () => {
 	const { user, isAuthenticated, isLoading, getAccessTokenSilently } =
@@ -20,6 +21,7 @@ const Profile = () => {
 				<img src={user.picture} alt={user.name} />
 				<h2>{user.name}</h2>
 				<p>{user.email}</p>
+				<GoogleDrivePicker />
 				<Logout />
 			</div>
 		)
