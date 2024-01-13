@@ -12,7 +12,7 @@ function App() {
 			<Router>
 				<Routes>
 					<Route
-						path="/communityaccount"
+						path="/community/account"
 						element={<CommunityAccount />}></Route>
 					<Route path="/profile" element={<Profile />}></Route>
 					<Route path="/" element={<Home />}></Route>

@@ -19,6 +19,7 @@ const SegmentedSlider = ({ options }) => {
 				colorBgLayout: token.colorSecondary,
 			}}
 			options={options}
+			block
 		/>
 	);
 };

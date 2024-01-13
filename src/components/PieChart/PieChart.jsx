@@ -1,37 +1,10 @@
-import { Pie, measureTextWidth } from "@ant-design/plots";
+import { Pie } from "@ant-design/plots";
 
 const PieChart = () => {
-	function renderStatistic(containerWidth, text, style) {
-		const { width: textWidth, height: textHeight } = measureTextWidth(
-			text,
-			style
-		);
-		const R = containerWidth / 2; // r^2 = (w / 2)^2 + (h - offsetY)^2
-
-		let scale = 1;
-
-		if (containerWidth < textWidth) {
-			scale = Math.min(
-				Math.sqrt(
-					Math.abs(
-						Math.pow(R, 2) /
-							(Math.pow(textWidth / 2, 2) + Math.pow(textHeight, 2))
-					)
-				),
-				1
-			);
-		}
-
-		const textStyleStr = `width:${containerWidth}px;`;
-		return `<div style="${textStyleStr};font-size:${scale}em;line-height:${
-			scale < 1 ? 1 : "inherit"
-		};">${text}</div>`;
-	}
-
 	const data = [
 		{
 			type: "A",
-			value: 42,
+			value: 27,
 		},
 		{
 			type: "B",
@@ -60,49 +33,16 @@ const PieChart = () => {
 		angleField: "value",
 		colorField: "type",
 		radius: 1,
-		innerRadius: 0.75,
-		meta: {
-			value: {
-				formatter: (v) => `${v} €`,
-			},
-		},
+		innerRadius: 0.7,
 		label: {
 			type: "inner",
 			offset: "-50%",
+			content: "{value}",
 			style: {
 				textAlign: "center",
-			},
-			autoRotate: false,
-			content: "{value}",
-		},
-		statistic: {
-			title: {
-				offsetY: -4,
-				customHtml: (container, view, datum) => {
-					const { width, height } = container.getBoundingClientRect();
-					const d = Math.sqrt(Math.pow(width / 2, 2) + Math.pow(height / 2, 2));
-					const text = datum ? datum.type : "€";
-					return renderStatistic(d, text, {
-						fontSize: 28,
-					});
-				},
-			},
-			content: {
-				offsetY: 4,
-				style: {
-					fontSize: "32px",
-				},
-				customHtml: (container, view, datum, data) => {
-					const { width } = container.getBoundingClientRect();
-					const totalAmount = data.reduce((r, d) => r + d.value, 0);
-					const text = datum ? `€ ${datum.value}` : `€ ${totalAmount}`;
-					return renderStatistic(width, text, {
-						fontSize: 32,
-					});
-				},
+				fontSize: 14,
 			},
 		},
-
 		interactions: [
 			{
 				type: "element-selected",
@@ -110,10 +50,18 @@ const PieChart = () => {
 			{
 				type: "element-active",
 			},
-			{
-				type: "pie-statistic-active",
-			},
 		],
+		statistic: {
+			title: false,
+			content: {
+				style: {
+					whiteSpace: "pre-wrap",
+					overflow: "hidden",
+					textOverflow: "ellipsis",
+				},
+				content: "AntV\nG2Plot",
+			},
+		},
 	};
 	return <Pie {...config} />;
 };
