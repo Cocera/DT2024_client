@@ -13,8 +13,15 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 				borderRadiusXS: 20,
 				colorPrimary: '#AB172F',
 				colorSecondary: '#024B59',
-				textColor: '#707070',
 			},
+			// components: {
+			// 	Segmented: {
+			// 		token: {
+			// 			itemActiveBg: '#AB172F',
+			// 			itemSelectedBg: '#024B59',
+			// 		},
+			// 	},
+			// }
 		}}
 	>
 		<Auth0Provider
@@ -22,7 +29,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 			clientId="OTqs67fdnQhgjhJHCNjDXsz15ngesR4D"
 			authorizationParams={{
 				audience: "http://localhost:8080",
-			redirect_uri: window.location.origin + "/profile",
+				redirect_uri: window.location.origin + "/profile",
 			}}>
 			<App />
 		</Auth0Provider>

@@ -6,7 +6,7 @@ import SegmentedSlider from "../../components/SegmentedSlider/SegmentedSlider";
 const CommunityAccountHistory = () => {
     return (
         <>
-            <h1>CommunityAccountHistory PAGE</h1>
+            <h3>Community Account History</h3>
             <SegmentedSlider />
             <ExpensesList />
         </>

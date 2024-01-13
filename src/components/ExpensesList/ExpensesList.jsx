@@ -1,7 +1,9 @@
 import React from "react";
 import "./ExpensesList.scss";
-import { Avatar, Divider, Flex, List, Skeleton } from 'antd';
+import { Avatar, Divider, Flex, List, Skeleton, theme } from 'antd';
 import { DollarOutlined } from '@ant-design/icons';
+
+const { useToken } = theme;
 
 const data = [
     {
@@ -23,6 +25,7 @@ const data = [
 ];
 
 const ExpensesList = () => {
+    const { token } = useToken();
     return (
         <List
             itemLayout="horizontal"
