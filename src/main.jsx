@@ -8,7 +8,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 	<ConfigProvider
 		theme={{
 			token: {
-				borderRadius: 16,
+				borderRadius: 20,
+				borderRadiusSM: 20,
+				borderRadiusXS: 20,
 				// colorPrimary: '#00ad4a',
 				// colorBgContainer: '#f6ffed',
 			},
