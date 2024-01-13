@@ -31,7 +31,7 @@ const PieChart = () => {
 	const data = [
 		{
 			type: "A",
-			value: 27,
+			value: 42,
 		},
 		{
 			type: "B",
@@ -63,7 +63,7 @@ const PieChart = () => {
 		innerRadius: 0.75,
 		meta: {
 			value: {
-				formatter: (v) => `${v} $`,
+				formatter: (v) => `${v} €`,
 			},
 		},
 		label: {
@@ -81,7 +81,7 @@ const PieChart = () => {
 				customHtml: (container, view, datum) => {
 					const { width, height } = container.getBoundingClientRect();
 					const d = Math.sqrt(Math.pow(width / 2, 2) + Math.pow(height / 2, 2));
-					const text = datum ? datum.type : "总计";
+					const text = datum ? datum.type : "€";
 					return renderStatistic(d, text, {
 						fontSize: 28,
 					});
@@ -94,9 +94,8 @@ const PieChart = () => {
 				},
 				customHtml: (container, view, datum, data) => {
 					const { width } = container.getBoundingClientRect();
-					const text = datum
-						? `¥ ${datum.value}`
-						: `¥ ${data.reduce((r, d) => r + d.value, 0)}`;
+					const totalAmount = data.reduce((r, d) => r + d.value, 0);
+					const text = datum ? `€ ${datum.value}` : `€ ${totalAmount}`;
 					return renderStatistic(width, text, {
 						fontSize: 32,
 					});
