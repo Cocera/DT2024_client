@@ -1,10 +1,9 @@
 import React from 'react';
-import "./SegmentedTwoSlider.scss";
+import "./SegmentedSlider.scss";
 import { Avatar, Flex, Segmented, Button } from 'antd';
 
-const SegmentedTwoSlider = () => (
-    <Flex gap="small" align="flex-start" vertical >
-        <Segmented style={{ padding: 4 }}
+const SegmentedSlider = () => (
+        <Segmented style={{ padding: 1 }}
             options={[
                 {
                     label: (
@@ -24,7 +23,6 @@ const SegmentedTwoSlider = () => (
                 }
             ]}
         />
-    </Flex>
 );
 
-export default SegmentedTwoSlider;
+export default SegmentedSlider;
