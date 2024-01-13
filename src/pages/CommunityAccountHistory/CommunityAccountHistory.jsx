@@ -4,6 +4,7 @@ import ExpensesList from "../../components/ExpensesList/ExpensesList";
 import SegmentedSlider from "../../components/SegmentedSlider/SegmentedSlider";
 import { LeftOutlined } from "@ant-design/icons";
 import ColumnsChart from "../../components/ColumnsChart/ColumnsChart";
+import ExpensesResume from "../../components/ExpensesResume/ExpensesResume";
 
 const CommunityAccountHistory = () => {
     return (
@@ -14,6 +15,7 @@ const CommunityAccountHistory = () => {
                 Historial
             </a>
             <ColumnsChart />
+            <ExpensesResume />
             <SegmentedSlider />
             <ExpensesList />
         </>
