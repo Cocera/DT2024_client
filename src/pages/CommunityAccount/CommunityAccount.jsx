@@ -1,6 +1,6 @@
-import { Segmented } from "antd";
 import PieChart from "../../components/PieChart/PieChart";
 import { LeftOutlined } from "@ant-design/icons";
+import SegmentedSlider from "../../components/SegmentedSlider/SegmentedSlider";
 
 const CommunityAccount = () => {
 	return (
@@ -11,7 +11,7 @@ const CommunityAccount = () => {
 				Comunidades
 			</a>
 			<PieChart />
-			<Segmented options={["Cuentas", "Incidencias", "Documentos"]} block />
+			<SegmentedSlider options={["Cuentas", "Incidencias", "Documentos"]} />
 		</>
 	);
 };
