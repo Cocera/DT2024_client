@@ -2,6 +2,8 @@ import React from "react";
 import "./CommunityAccountHistory.scss";
 import ExpensesList from "../../components/ExpensesList/ExpensesList";
 import SegmentedSlider from "../../components/SegmentedSlider/SegmentedSlider";
+import { LeftOutlined } from "@ant-design/icons";
+import ColumnsChart from "../../components/ColumnsChart/ColumnsChart";
 
 const CommunityAccountHistory = () => {
     return (
@@ -11,7 +13,7 @@ const CommunityAccountHistory = () => {
                 <LeftOutlined />
                 Historial
             </a>
-            <h3>Community Account History</h3>
+            <ColumnsChart />
             <SegmentedSlider />
             <ExpensesList />
         </>
