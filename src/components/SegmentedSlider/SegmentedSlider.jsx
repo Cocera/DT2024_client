@@ -2,12 +2,13 @@ import React from 'react';
 import "./SegmentedSlider.scss";
 import { Avatar, Flex, Segmented, Button } from 'antd';
 
-const SegmentedSlider = () => (
+const SegmentedSlider = () => {
+    return (
         <Segmented style={{ padding: 1 }}
             options={[
                 {
                     label: (
-                        <div className='divSegmentedTwo'>
+                        <div style={{ padding: 5, paddingLeft: 9, paddingRight: 9 }}>
                             Gastos
                         </div>
                     ),
@@ -15,7 +16,7 @@ const SegmentedSlider = () => (
                 },
                 {
                     label: (
-                        <div>
+                        <div style={{ padding: 3, paddingLeft: 9, paddingRight: 9 }}>
                             Ingresos
                         </div>
                     ),
@@ -23,6 +24,7 @@ const SegmentedSlider = () => (
                 }
             ]}
         />
-);
+    )
+};
 
 export default SegmentedSlider;

@@ -1,6 +1,5 @@
 import "./App.css";
 import "./fonts.scss";
-import "./colors.scss";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Profile from "./pages/Profile/Profile";
 import Home from "./pages/Home/Home";

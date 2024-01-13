@@ -11,8 +11,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 				borderRadius: 20,
 				borderRadiusSM: 20,
 				borderRadiusXS: 20,
-				// colorPrimary: '#00ad4a',
-				// colorBgContainer: '#f6ffed',
+				colorPrimary: '#AB172F',
+				colorSecondary: '#024B59',
+				textColor: '#707070',
 			},
 		}}
 	>
