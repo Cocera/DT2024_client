@@ -13,6 +13,7 @@ const CommunitySearch = () => {
             </a>
             <SearchBar />
             <CardImage />
+            <CardImage />
         </>
     )
 };
