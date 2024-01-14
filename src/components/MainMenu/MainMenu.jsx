@@ -1,9 +1,7 @@
 // MainMenu.jsx
 
 import React from 'react';
-import CircleButton from '../CircleButton/CircleButton';
 import './MainMenu.scss';
-import CentralButton from '../CentralButton/CentralButton';
 
 function MainMenu() {
     const buttons = [

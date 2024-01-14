@@ -4,7 +4,6 @@ import Footer from "../../components/Footer/Footer";
 import Bubbles from "../../components/Bubbles/Bubbles";
 import MainMenu from "../../components/MainMenu/MainMenu";
 
-
 const Homepage = () => {
 	return (
 		<>
