@@ -5,6 +5,7 @@ import SegmentedSlider from "../../components/SegmentedSlider/SegmentedSlider";
 import { LeftOutlined } from "@ant-design/icons";
 import ColumnsChart from "../../components/ColumnsChart/ColumnsChart";
 import ExpensesResume from "../../components/ExpensesResume/ExpensesResume";
+import MainMenu from "../../components/MainMenu/MainMenu";
 
 const CommunityAccountHistory = () => {
 	const options = [
@@ -27,6 +28,7 @@ const CommunityAccountHistory = () => {
 	];
 	return (
 		<>
+		<MainMenu/>
 			<a>
 				{" "}
 				<LeftOutlined />
