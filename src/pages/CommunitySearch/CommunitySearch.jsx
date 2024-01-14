@@ -1,11 +1,18 @@
 import React from "react";
 import CardImage from "../../components/CardImage/CardImage";
+import { LeftOutlined } from "@ant-design/icons";
+import SearchBar from "../../components/SearchBar/SearchBar";
 
 const CommunitySearch = () => {
     return (
         <>
-        <h1>Hola</h1>
-        <CardImage/>
+            <a>
+                {" "}
+                <LeftOutlined />
+                Comunidades
+            </a>
+            <SearchBar />
+            <CardImage />
         </>
     )
 };

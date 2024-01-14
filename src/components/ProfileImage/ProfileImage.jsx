@@ -5,7 +5,7 @@ import { Image } from 'antd';
 const ProfileImage = (params) => {
     return (
         <>
-                <Image src={params.src} width={params.width} height={params.height} />
+            <Image src={params.src} width={params.width} height={params.height} />
         </>
     )
 };

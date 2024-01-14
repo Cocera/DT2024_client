@@ -2,6 +2,10 @@
     position: relative;
     width: 366px;
     height: 128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
 
     div {
         position: absolute;
