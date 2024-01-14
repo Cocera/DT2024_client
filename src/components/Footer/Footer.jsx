@@ -1,10 +1,11 @@
 import React from "react";
 import "./Footer.scss";
+import NavBarGeneral from "../NavBarGeneral/NavBarGeneral";
 
 const Footer = () => {
   return (
     <div className="footer-container">
-      <h3>Esto es el FOOTER</h3>
+      <NavBarGeneral />
     </div>
   );
 };
