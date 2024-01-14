@@ -1,4 +1,4 @@
-import { PieChart, Pie, Tooltip, Cell, Label } from "recharts";
+import { PieChart, Pie, Tooltip, Cell, LabelList, Label } from "recharts";
 
 const DonutChart = () => {
 	const data = [
@@ -19,38 +19,28 @@ const DonutChart = () => {
 		"#A5BEAC",
 	];
 
-	const radian = Math.PI / 180;
-	const renderCustomizedLabel = ({
-		cx,
-		cy,
-		midAngle,
-		innerRadius,
-		outerRadius,
-		percent,
-	}) => {
-		const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-		const x = cx + radius * Math.cos(-midAngle * radian);
-		const y = cy + radius * Math.sin(-midAngle * radian);
+	const renderCustomizedLabel = (data, total) => {
+		console.log("hola");
+		const calculateTotal = (data) => {
+			return data.reduce((acc, entry) => acc + entry.value, 0);
+		};
 
-		return (
-			<text
-				x={x}
-				y={y}
-				fill="white"
-				textAnchor={x > cx ? "start" : "end"}
-				dominantBaseline="central">
-				{`${(percent * 100).toFixed(0)}%`}
-			</text>
-		);
+		total = calculateTotal(data);
+		console.log("Total:", total);
+		console.log("Data", data);
+		console.log(data.value / total);
+
+		let percentageCalculated = (data.payload.value / total) * 100;
+		return percentageCalculated.toFixed(2).replace(".", ",").toString() + "%";
 	};
 
 	return (
 		<>
-			<h1>Address</h1>
 			<div
 				style={{
 					textAlign: "center",
-					margin: "auto 10%",
+					display: "flex",
+					justifyContent: "center",
 				}}>
 				<PieChart width={700} height={700}>
 					<Tooltip />
@@ -59,11 +49,17 @@ const DonutChart = () => {
 						dataKey="value"
 						outerRadius={250}
 						innerRadius={150}
-						fill="green"
+						fill="#024B59"
 						labelLine={false}
-						label={({ name, value }) => `${name}: ${value}`}
-						// label={renderCustomizedLabel}
-					>
+						label={({ name }) => `${name}`}>
+						<LabelList
+							dy={-3}
+							fill="white"
+							content={{ renderCustomizedLabel }}
+							position="inside"
+							angle="0"
+							stroke="none"
+						/>
 						<Label value="Total" position="center" />
 						{data.map((entry, index) => (
 							<Cell
