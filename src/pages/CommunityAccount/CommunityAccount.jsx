@@ -3,6 +3,7 @@ import PieChart from "../../components/PieChart/PieChart";
 import { LeftOutlined } from "@ant-design/icons";
 import SegmentedSlider from "../../components/SegmentedSlider/SegmentedSlider";
 import Cards from "../../components/Cards/Cards";
+import ProfileImage from "../../components/ProfileImage/ProfileImage";
 
 const CommunityAccount = () => {
 	const [selectedOption, setSelectedOption] = useState("Cuentas");
