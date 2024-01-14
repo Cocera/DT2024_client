@@ -1,0 +1,27 @@
+.card-image-container {
+    position: relative;
+    width: 366px;
+    height: 128px;
+
+    div {
+        position: absolute;
+    }
+
+    div.ant-image {
+        left: 0px;
+        z-index: 2;
+    }
+
+    div.ant-card {
+        left: 65px;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .ant-card-body {
+            // METER ESTILOS TEXT BODY CARD
+            background-color: white;
+        }
+    }
+}
