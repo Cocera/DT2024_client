@@ -10,6 +10,8 @@ const DonutChart = () => {
 		{ name: "Icon6", value: 1000 },
 	];
 
+	const totalValue = data.reduce((acc, entry) => acc + entry.value, 0);
+
 	const colors = [
 		"#024B59",
 		"#AB172F",
@@ -19,19 +21,32 @@ const DonutChart = () => {
 		"#A5BEAC",
 	];
 
-	const renderCustomizedLabel = (data, total) => {
-		console.log("hola");
-		const calculateTotal = (data) => {
-			return data.reduce((acc, entry) => acc + entry.value, 0);
-		};
-
-		total = calculateTotal(data);
-		console.log("Total:", total);
-		console.log("Data", data);
-		console.log(data.value / total);
-
-		let percentageCalculated = (data.payload.value / total) * 100;
-		return percentageCalculated.toFixed(2).replace(".", ",").toString() + "%";
+	const RADIAN = Math.PI / 180;
+	const renderCustomizedLabel = (props) => {
+		const { cx, cy, viewBox } = props;
+		const radius =
+			viewBox.innerRadius + (viewBox.outerRadius - viewBox.innerRadius) * 0.4;
+		const midAngle = (viewBox.endAngle + viewBox.startAngle) / 2;
+		const x = cx + radius * Math.cos(-midAngle * RADIAN);
+		const y = cy + radius * Math.sin(-midAngle * RADIAN);
+		console.log(props);
+		let percentageCalculated = (props.value / totalValue) * 100;
+		const percentString =
+			percentageCalculated.toFixed(2).replace(".", ",").toString() + "%";
+		console.log("percent", percentString);
+		console.log(typeof percentString);
+		return (
+			<text
+				dy={1}
+				dx={5}
+				x={x}
+				y={y}
+				fill="white"
+				textAnchor={x > cx ? "start" : "end"}
+				dominantBaseline="central">
+				{percentString}
+			</text>
+		);
 	};
 
 	return (
@@ -55,12 +70,12 @@ const DonutChart = () => {
 						<LabelList
 							dy={-3}
 							fill="white"
-							content={{ renderCustomizedLabel }}
 							position="inside"
 							angle="0"
 							stroke="none"
+							content={renderCustomizedLabel}
 						/>
-						<Label value="Total" position="center" />
+						<Label value={`Total: €${totalValue}`} position="center" />
 						{data.map((entry, index) => (
 							<Cell
 								key={`cell-${index}`}
