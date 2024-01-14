@@ -1,40 +1,9 @@
-// import { NavLink } from "react-router-dom";
-// import StoreFrontIcon from "../../assets/StoreFrontIcon";
-// import ProfileIcon from "../../assets/ProfileIcon";
-// import WarningIcon from "../../assets/WarningIcon";
-// import HomeIcon from "../../assets/HomeIcon";
-
-// import React from "react";
-
-// const NavBarGeneral = () => {
-//   return (
-//     <>
-//       <nav>
-//         <NavLink to="/">
-//           <HomeIcon />
-//         </NavLink>
-//         <NavLink to="/">
-//           <WarningIcon width="70px" />
-//         </NavLink>
-//         <NavLink to="/">
-//           <StoreFrontIcon />
-//         </NavLink>
-//         <NavLink to="/">
-//           <ProfileIcon />
-//         </NavLink>
-//       </nav>
-//     </>
-//   );
-// };
-
-// export default NavBarGeneral;
-
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import HomeIcon from "../../assets/HomeIcon";
-import WarningIcon from "../../assets/WarningIcon";
-import StoreFrontIcon from "../../assets/StoreFrontIcon";
-import ProfileIcon from "../../assets/ProfileIcon";
+import HomeIcon from "../../assets/HomeIcon/HomeIcon";
+import WarningIcon from "../../assets/WarningIcon/WarningIcon";
+import StoreFrontIcon from "../../assets/StoreFrontIcon/StoreFrontIcon";
+import ProfileIcon from "../../assets/ProfileIcon/ProfileIcon";
 import "./NavBarGeneral.scss";
 
 const NavBarGeneral = () => {
@@ -46,7 +15,7 @@ const NavBarGeneral = () => {
 
   return (
     <div className="navigation">
-      <ul>
+      <ul  style={{ '--active-index': activeIndex }}>
         <li
           className={`list ${activeIndex === 0 ? "active" : ""}`}
           onClick={() => handleItemClick(0)}
@@ -69,10 +38,13 @@ const NavBarGeneral = () => {
             </span>
           </a>
         </li>
-        <li className={`list ${activeIndex === 2 ? 'active' : ''}`} onClick={() => handleItemClick(2)}>
+        <li
+          className={`list ${activeIndex === 2 ? "active" : ""}`}
+          onClick={() => handleItemClick(2)}
+        >
           <span className="icon">
             <NavLink to="/">
-              <StoreFrontIcon isActive={activeIndex === 2} />
+              <StoreFrontIcon className='ST' isActive={activeIndex === 2}/>
             </NavLink>
           </span>
         </li>
