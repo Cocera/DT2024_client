@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { AutoComplete } from 'antd';
+import { SearchOutlined } from '@ant-design/icons';
+
 const mockVal = (str, repeat = 1) => ({
   value: str.repeat(repeat),
 });
@@ -19,7 +21,7 @@ const SearchBar = () => {
         }}
         onSelect={onSelect}
         onSearch={(text) => setOptions(getPanelValue(text))}
-        placeholder="input here"
+        placeholder={<SearchOutlined />}
       />
     </>
   );
