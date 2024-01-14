@@ -1,23 +1,31 @@
-import React from "react";
-import { Button, Space } from 'antd';
+// import React from "react";
+// import { Button, Space } from 'antd';
+// import "./Bubbles.scss";
 
-const Bubbles = () => {
-  const buttonStyle = {
-    width: '150px', // Adjust the width as needed
-    height: '150px', // Adjust the height as needed
-    borderRadius: '50%', 
-    fontSize: '18px', // Adjust the font size as needed
-  };
+// const Bubbles = () => {
+//   const buttonStyle = {
+//     width: '100px',
+//     height: '100px',
+//     borderRadius: '50%',
+//     fontSize: '18px',
+//     position: 'absolute', // Set the position to absolute
+//     transform: 'translate(-50%, -50%)', // Center the button on its position
+//   };
 
-  return (
-    <Space size="large" style={{ justifyContent: 'center' }}>
-      <Button style={buttonStyle}>Button 1</Button>
-      <Button style={buttonStyle}>Button 2</Button>
-      <Button style={buttonStyle}>Button 3</Button>
-      <Button style={buttonStyle}>Button 4</Button>
-      <Button style={buttonStyle}>Button 5</Button>
-    </Space>
-  );
-};
+//   return (
+//     <div className="bubbles-container">
+//       <div className="midbb">
+//         <Button style={{ ...buttonStyle, top: '50%', left: '50%' }}>mid</Button>
+//       </div>
+//       <Button className="toplbb" style={{ ...buttonStyle, top: '10%', left: '10%' }}>top left</Button>
+//       <Button className="toprbb" style={{ ...buttonStyle, top: '10%', left: '90%' }}>top right</Button>
+//       <Button className="midlbb" style={{ ...buttonStyle, top: '50%', left: '10%' }}>btm left</Button>
+//       <Button className="midrbb" style={{ ...buttonStyle, top: '50%', left: '90%' }}>btm right</Button>
+//       <Button className="btmbb" style={{ ...buttonStyle, top: '90%', left: '50%' }}>btm</Button>
+//     </div>
+//   );
+// };
 
-export default Bubbles;
+// export default Bubbles;
+
+
