@@ -7,6 +7,7 @@ import CommunityAccount from "./pages/CommunityAccount/CommunityAccount";
 import CommunityAccountHistory from "./pages/CommunityAccountHistory/CommunityAccountHistory";
 import Search from "./pages/Search/Search";
 import IncidencesList from "./pages/IncidencesList/IncidencesList";
+import IncidenceInfo from "./pages/IncidenceInfo/IncidenceInfo";
 
 function App() {
 	return (
@@ -17,25 +18,26 @@ function App() {
 					<Route
 						path="/comunidad/cuenta"
 						element={<CommunityAccount />}></Route>
-					<Route path="/profile" element={<Profile />}></Route>
+					<Route path="/perfil" element={<Profile />}></Route>
 					<Route
 						path="/comunidad/cuenta/gastos"
 						element={<CommunityAccountHistory />}></Route>
 					<Route
 						path="/comunidad/cuenta/ingresos"
 						element={<CommunityAccountHistory />}></Route>
-					<Route
-						path="/incidencia/busqueda"
-						element={<Search />}></Route>
-					<Route
-						path="/comunidad/busqueda"
-						element={<Search />}></Route>
+					<Route path="/incidencia/busqueda" element={<Search />}></Route>
+					<Route path="/comunidad/busqueda" element={<Search />}></Route>
 					<Route
 						path="/comunidad/incidencias/activas"
 						element={<IncidencesList />}></Route>
 					<Route
 						path="/comunidad/incidencias/pendientes"
 						element={<IncidencesList />}></Route>
+
+					<Route path="/buscador/comunidad" element={<Search />}></Route>
+					<Route
+						path="/comunidad/incidencias/info"
+						element={<IncidenceInfo />}></Route>
 					{/* <Route path="*" element={<NotFound />}></Route> */}
 				</Routes>
 			</Router>

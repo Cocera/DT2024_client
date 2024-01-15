@@ -15,51 +15,23 @@ const NavBarGeneral = () => {
 
   return (
     <div className="navigation">
-      <ul  style={{ '--active-index': activeIndex }}>
-        <li
-          className={`list ${activeIndex === 0 ? "active" : ""}`}
-          onClick={() => handleItemClick(0)}
-        >
-          <span className="icon">
-            <NavLink to="/">
-              <HomeIcon />
+      <ul style={{ '--active-index': activeIndex }}>
+        {['/', '/', '/', '/'].map((route, index) => (
+          <li
+            key={index}
+            className={`list ${activeIndex === index ? "active" : ""}`}
+            onClick={() => handleItemClick(index)}
+          >
+            <NavLink to={route}>
+              <span className="icon">
+                {index === 0 && <HomeIcon isActive={activeIndex === 0} />}
+                {index === 1 && <WarningIcon isActive={activeIndex === 1} />}
+                {index === 2 && <StoreFrontIcon isActive={activeIndex === 2} />}
+                {index === 3 && <ProfileIcon isActive={activeIndex === 3} />}
+              </span>
             </NavLink>
-          </span>
-        </li>
-        <li
-          className={`list ${activeIndex === 1 ? "active" : ""}`}
-          onClick={() => handleItemClick(1)}
-        >
-          <a href="#">
-            <span className="icon">
-              <NavLink to="/">
-                <WarningIcon />
-              </NavLink>
-            </span>
-          </a>
-        </li>
-        <li
-          className={`list ${activeIndex === 2 ? "active" : ""}`}
-          onClick={() => handleItemClick(2)}
-        >
-          <span className="icon">
-            <NavLink to="/">
-              <StoreFrontIcon className='ST' isActive={activeIndex === 2}/>
-            </NavLink>
-          </span>
-        </li>
-        <li
-          className={`list ${activeIndex === 3 ? "active" : ""}`}
-          onClick={() => handleItemClick(3)}
-        >
-          <a href="#">
-            <span className="icon">
-              <NavLink to="/">
-                <ProfileIcon />
-              </NavLink>
-            </span>
-          </a>
-        </li>
+          </li>
+        ))}
         <div className="indicator">
           <span></span>
         </div>

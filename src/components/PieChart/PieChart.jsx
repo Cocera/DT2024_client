@@ -20,8 +20,28 @@ const DonutChart = () => {
 		"#2BB0C9",
 		"#A5BEAC",
 	];
-
 	const RADIAN = Math.PI / 180;
+
+	// const renderIcon = (props) => {
+	// 	const { cx, cy, midAngle, innerRadius, outerRadius } = props;
+	// 	const radius = outerRadius + 30; // Adjust this value as needed
+	// 	const x = cx + radius * Math.cos(-midAngle * RADIAN); // Adjust for icon size
+	// 	const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+	// 	// Conditionally render the appropriate icon based on the name
+	// 	switch (props.payload.name) {
+	// 		case "Icon1":
+	// 			return <LightBulbIcon cx={x} cy={y} />;
+	// 		case "Icon2":
+	// 			return <LightBulbIcon cx={x} cy={y} />;
+	// 		case "Icon3":
+	// 			return <LightBulbIcon cx={x} cy={y} />;
+	// 		// Add more cases as needed for each icon
+	// 		default:
+	// 			return null; // Return null for default case or when no match is found
+	// 	}
+	// };
+
 	const renderCustomizedLabel = (props) => {
 		const { cx, cy, viewBox } = props;
 		const radius =
@@ -66,7 +86,7 @@ const DonutChart = () => {
 						innerRadius={150}
 						fill="#024B59"
 						labelLine={false}
-						label={({ name }) => `${name}`}>
+						label={name}>
 						<LabelList
 							dy={-3}
 							fill="white"
