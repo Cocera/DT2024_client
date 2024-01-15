@@ -3,7 +3,7 @@ import ColumnsChartMonth from "./ColumnsChartMonth/ColumnsChartMonth";
 import { Flex } from "antd";
 // import "./ColumnsChartMonth.scss";
 
-const ColumnsChartMine = () => {
+const ColumnsChartCustom = () => {
     return (
         <>
             <Flex align="flex-end" justify="space-evenly" gap={8} style={{height: 128, padding:18}}>
@@ -18,4 +18,4 @@ const ColumnsChartMine = () => {
     )
 };
 
-export default ColumnsChartMine;
+export default ColumnsChartCustom;
