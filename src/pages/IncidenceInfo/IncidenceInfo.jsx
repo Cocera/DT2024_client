@@ -17,7 +17,7 @@ const Incidencia = {
 const IncidenceInfo = () => {
   return (
     <>
-      <Header />
+      <Header title="Pendientes / Humedad en escalera" community="Av. Reino de Valencia, 87" />
       <div className="container-incidence-info">
         <IncidenceImage />
         <div className="info">
