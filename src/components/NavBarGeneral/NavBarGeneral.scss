@@ -4,7 +4,7 @@
 
 .navigation {
   width: 420px;
-  height: 70px;
+  height: 72px;
   background: #024b59;
   position: relative;
   display: flex;
@@ -28,6 +28,7 @@
       &.active a .icon {
         transform: translateY(-27px);
         opacity: 1;
+        color: #590246;
       }
     }
 
