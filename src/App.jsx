@@ -7,6 +7,9 @@ import CommunityAccount from "./pages/CommunityAccount/CommunityAccount";
 import CommunityAccountHistory from "./pages/CommunityAccountHistory/CommunityAccountHistory";
 import Search from "./pages/Search/Search";
 import IncidencesList from "./pages/IncidencesList/IncidencesList";
+import CommunitySearch from "./pages/CommunitySearch/COmmunitySearch";
+import IncidenceInfo from "./pages/IncidenceInfo/IncidenceInfo";
+
 
 function App() {
 	return (
@@ -16,9 +19,11 @@ function App() {
 					<Route path="/" element={<Home />}></Route>
 					<Route
 						path="/comunidad/cuenta"
+						path="/comunidad/cuenta"
 						element={<CommunityAccount />}></Route>
 					<Route path="/profile" element={<Profile />}></Route>
 					<Route
+						path="/comunidad/cuenta/historial"
 						path="/comunidad/cuenta/historial"
 						element={<CommunityAccountHistory />}></Route>
 					<Route
@@ -33,6 +38,9 @@ function App() {
 					<Route
 						path="/comunidad/incidencias/pendientes"
 						element={<IncidencesList />}></Route>
+
+					<Route path="/buscador/comunidad" element={<CommunitySearch />}></Route>
+					<Route path="/comunidad/incidencias/info" element={<IncidenceInfo />}></Route>
 					{/* <Route path="*" element={<NotFound />}></Route> */}
 				</Routes>
 			</Router>
