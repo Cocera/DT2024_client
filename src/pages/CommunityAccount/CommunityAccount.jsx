@@ -1,3 +1,4 @@
+import "./CommunityAccount.scss";
 import { useState } from "react";
 import PieChart from "../../components/PieChart/PieChart";
 import { LeftOutlined } from "@ant-design/icons";

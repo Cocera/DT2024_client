@@ -1,11 +1,9 @@
-import React from "react";
-import {
-	HomeOutlined,
-	LoadingOutlined,
-	SmileOutlined,
-	SolutionOutlined,
-	UserOutlined,
-} from "@ant-design/icons";
+import PublishIcon from "@mui/icons-material/PublishRounded";
+import ListIcon from "@mui/icons-material/ListAltRounded";
+import SearchIcon from "@mui/icons-material/SearchRounded";
+import BuildIcon from "@mui/icons-material/BuildRounded";
+import LogoutIcon from "@mui/icons-material/LogoutRounded";
+
 import { Steps } from "antd";
 const description = "Description.";
 
@@ -17,31 +15,31 @@ const IncidentProgress = () => {
 				{
 					title: "Registro de incidencia",
 					status: "finish",
-					icon: <HomeOutlined />,
+					icon: <PublishIcon />,
 					description,
 				},
 				{
 					title: "Apertura de reclamación",
 					status: "finish",
-					icon: <SolutionOutlined />,
+					icon: <ListIcon />,
 					description,
 				},
 				{
 					title: "Inspección",
 					status: "wait",
-					icon: <LoadingOutlined />,
+					icon: <SearchIcon />,
 					description,
 				},
 				{
 					title: "Trabajando en la reparación",
 					status: "wait",
-					icon: <SmileOutlined />,
+					icon: <BuildIcon />,
 					description,
 				},
 				{
 					title: "Finalización",
 					status: "wait",
-					icon: <UserOutlined />,
+					icon: <LogoutIcon />,
 					description,
 				},
 			]}
