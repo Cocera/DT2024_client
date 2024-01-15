@@ -8,9 +8,7 @@ const Homepage = () => {
   return (
     <>
       <Header />
-      <Nav />
       <MainMenu />
-
       <Footer />
     </>
   );

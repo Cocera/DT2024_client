@@ -1,0 +1,23 @@
+.second-header {
+    height: 50px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+
+    div {
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100%;
+        justify-content: space-between;
+
+        p {
+            margin: 0;
+        }
+    }
+
+
+}

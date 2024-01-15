@@ -3,6 +3,7 @@ import { LeftOutlined } from "@ant-design/icons";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import { useLocation } from 'react-router-dom';
 import Footer from "../../components/Footer/Footer";
+import Header from "../../components/Header/Header";
 
 
 const Search = () => {
@@ -12,11 +13,7 @@ const Search = () => {
     if (location.pathname === '/comunidad/busqueda') {
         return (
             <>
-                <a>
-                    {" "}
-                    <LeftOutlined />
-                    Comunidades
-                </a>
+                <Header title="Comunidades" />
                 <SearchBar />
                 <CardImage />
                 <CardImage />

@@ -1,9 +1,9 @@
 import CardImage from "../../components/CardImage/CardImage";
 import Footer from "../../components/Footer/Footer";
-import ProfileImage from "../../components/ProfileImage/ProfileImage";
 import "./IncidencesList.scss";
 import { LeftOutlined } from "@ant-design/icons";
 import { useLocation } from 'react-router-dom';
+import Header from "../../components/Header/Header";
 
 const IncidencesList = () => {
     const location = useLocation();
@@ -11,16 +11,10 @@ const IncidencesList = () => {
     if (location.pathname === '/comunidad/incidencias/activas') {
         return (
             <>
-                <h1>IncidencesList</h1>
-                <a>
-                    {" "}
-                    <LeftOutlined />
-                    Activas
-                </a>
-                <h1>Direccion de la comunidad</h1>
-                <CardImage/>
-                <Footer/>
-    
+                <Header title="Activas" community="Dirección comunidad" />
+                <CardImage />
+                <Footer />
+
             </>
         )
     }
@@ -28,16 +22,10 @@ const IncidencesList = () => {
     if (location.pathname === '/comunidad/incidencias/pendientes') {
         return (
             <>
-                <h1>IncidencesList</h1>
-                <a>
-                    {" "}
-                    <LeftOutlined />
-                    Pendientes
-                </a>
-                <h1>Direccion de la comunidad</h1>
-                <CardImage/>
-                <Footer/>
-    
+                <Header title="Pendientes" community="Dirección comunidad" />
+                <CardImage />
+                <Footer />
+
             </>
         )
     }

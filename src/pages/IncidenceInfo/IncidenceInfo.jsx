@@ -16,27 +16,29 @@ const Incidencia = {
 
 const IncidenceInfo = () => {
   return (
-    <div className="container">
+    <>
       <Header />
-      <IncidenceImage />
-      <div className="info">
-        <h6 className="title">{Incidencia.title}</h6>
-        <p>{Incidencia.description}</p>
+      <div className="container-incidence-info">
+        <IncidenceImage />
+        <div className="info">
+          <h6 className="title">{Incidencia.title}</h6>
+          <p>{Incidencia.description}</p>
 
-        <h6>Publicada por:</h6>
-        <p>{Incidencia.user}</p>
+          <h6>Publicada por:</h6>
+          <p>{Incidencia.user}</p>
 
-        <h6>Proveedor contactado: </h6>
-        <p>{Incidencia.provider}</p>
+          <h6>Proveedor contactado: </h6>
+          <p>{Incidencia.provider}</p>
 
-        <h6>Fecha de incidencia:</h6>
-        <p>{Incidencia.date}</p>
+          <h6>Fecha de incidencia:</h6>
+          <p>{Incidencia.date}</p>
+        </div>
+        <Footer />
+        <Button className="btn" type="primary">
+          Aprobar
+        </Button>
       </div>
-      <Footer />
-      <Button className="btn" type="primary">
-        Aprobar
-      </Button>
-    </div>
+    </>
   );
 };
 
