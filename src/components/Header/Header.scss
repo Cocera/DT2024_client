@@ -1,9 +1,13 @@
-.header{
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    
-}
-.logo {
-    width: 60vw;
+div.main-header{
+    height: 60px;
+    width: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    .logo {
+        height: 42px;
+        padding-left: 10px;
+    }  
 }
