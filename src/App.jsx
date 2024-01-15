@@ -19,7 +19,10 @@ function App() {
 						element={<CommunityAccount />}></Route>
 					<Route path="/profile" element={<Profile />}></Route>
 					<Route
-						path="/comunidad/cuenta/historial"
+						path="/comunidad/cuenta/gastos"
+						element={<CommunityAccountHistory />}></Route>
+					<Route
+						path="/comunidad/cuenta/ingresos"
 						element={<CommunityAccountHistory />}></Route>
 					<Route
 						path="/incidencia/busqueda"

@@ -26,19 +26,38 @@ const CommunityAccountHistory = () => {
 			value: "ingresos",
 		},
 	];
-	return (
-		<>
-			<a>
-				{" "}
-				<LeftOutlined />
-				Historial
-			</a>
-			<ColumnsChart />
-			<ExpensesResume />
-			<SegmentedSlider options={options} />
-			<ExpensesList />
-		</>
-	);
+
+	if (location.pathname === '/comunidad/cuenta/gastos') {
+		return (
+			<>
+				<a>
+					{" "}
+					<LeftOutlined />
+					Historial
+				</a>
+				<ColumnsChart />
+				<ExpensesResume />
+				<SegmentedSlider options={options} />
+				<ExpensesList />
+			</>
+		)
+	}
+	
+	if (location.pathname === '/comunidad/cuenta/ingresos') {
+		return (
+			<>
+				<a>
+					{" "}
+					<LeftOutlined />
+					Historial
+				</a>
+				<ColumnsChart />
+				<ExpensesResume />
+				<SegmentedSlider options={options} />
+				<ExpensesList />
+			</>
+		)
+	}
 };
 
 export default CommunityAccountHistory;
