@@ -2,3 +2,18 @@
   margin: auto;
 } */
 
+.main-color {
+  color: #AB172F;
+}
+
+.main-color-bg {
+  background-color: #AB172F;
+}
+
+.secondary-color {
+  color: #024B59;
+}
+
+.secondary-color-bg {
+  background-color: #024B59;
+}

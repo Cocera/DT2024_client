@@ -7,11 +7,13 @@ const ExpensesResume = () => {
         <>
             <Space direction="vertical" size="small" style={{ padding: 20, display: 'flex' }}>
                 <Flex justify='space-around' align='center'>
+                    <div className='color-container-expenses main-color-bg'></div>
                     <h4>Ingresos</h4>
                     <h4>10.000€</h4>
                 </Flex>
                 <Divider />
                 <Flex justify='space-around' align='center'>
+                    <div className='color-container-expenses secondary-color-bg'></div>
                     <h4>Gastos</h4>
                     <h4>10.000€</h4>
                 </Flex>

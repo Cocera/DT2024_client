@@ -8,14 +8,15 @@ import ExpensesResume from "../../components/ExpensesResume/ExpensesResume";
 import MainMenu from "../../components/MainMenu/MainMenu";
 import { useLocation } from 'react-router-dom';
 import Footer from "../../components/Footer/Footer";
+import Header from "../../components/Header/Header";
 
 const CommunityAccountHistory = () => {
 
 	const location = useLocation();
 
 	const handleOptionClick = (value) => {
-        onChange(value);
-    };
+		onChange(value);
+	};
 
 	const options = [
 		{
@@ -39,31 +40,23 @@ const CommunityAccountHistory = () => {
 	if (location.pathname === '/comunidad/cuenta/gastos') {
 		return (
 			<>
-				<a>
-					{" "}
-					<LeftOutlined />
-					Historial
-				</a>
-				<ColumnsChart />
+				<Header title="Historial" />
+				{/* <ColumnsChart /> */}
 				<ExpensesResume />
 				<SegmentedSlider options={options} />
 				<ExpensesList />
-				<Footer/>
+				<Footer />
 			</>
 		)
 	} else if (location.pathname === '/comunidad/cuenta/ingresos') {
 		return (
 			<>
-				<a>
-					{" "}
-					<LeftOutlined />
-					Historial
-				</a>
-				<ColumnsChart />
+				<Header title="Historial" />
+				{/* <ColumnsChart /> */}
 				<ExpensesResume />
 				<SegmentedSlider options={options} />
 				<ExpensesList />
-				<Footer/>
+				<Footer />
 			</>
 		)
 	}
