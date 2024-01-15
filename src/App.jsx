@@ -5,7 +5,8 @@ import Profile from "./pages/Profile/Profile";
 import Home from "./pages/Home/Home";
 import CommunityAccount from "./pages/CommunityAccount/CommunityAccount";
 import CommunityAccountHistory from "./pages/CommunityAccountHistory/CommunityAccountHistory";
-import CommunitySearch from "./pages/CommunitySearch/COmmunitySearch";
+import Search from "./pages/Search/Search";
+import IncidencesList from "./pages/IncidencesList/IncidencesList";
 
 function App() {
 	return (
@@ -21,8 +22,17 @@ function App() {
 						path="/community/account/history"
 						element={<CommunityAccountHistory />}></Route>
 					<Route
-						path="/search/community"
-						element={<CommunitySearch />}></Route>
+						path="/incidencia/busqueda"
+						element={<Search />}></Route>
+					<Route
+						path="/comunidad/busqueda"
+						element={<Search />}></Route>
+					<Route
+						path="/comunidad/incidencias/activas"
+						element={<IncidencesList />}></Route>
+					<Route
+						path="/comunidad/incidencias/pendientes"
+						element={<IncidencesList />}></Route>
 					{/* <Route path="*" element={<NotFound />}></Route> */}
 				</Routes>
 			</Router>
