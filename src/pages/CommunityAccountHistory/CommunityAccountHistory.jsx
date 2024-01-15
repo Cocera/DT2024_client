@@ -7,6 +7,7 @@ import ExpensesResume from "../../components/ExpensesResume/ExpensesResume";
 import { useLocation } from 'react-router-dom';
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
+import ColumnsChartMine from "../../components/ColumnsChartMine/ColumnsChartMine";
 
 const CommunityAccountHistory = () => {
 
@@ -39,6 +40,7 @@ const CommunityAccountHistory = () => {
 		return (
 			<>
 				<Header title="Historial" />
+				<ColumnsChartMine/>
 				{/* <ColumnsChart /> */}
 				<ExpensesResume />
 				<SegmentedSlider options={options} />
@@ -50,6 +52,7 @@ const CommunityAccountHistory = () => {
 		return (
 			<>
 				<Header title="Historial" />
+				<ColumnsChartMine/>
 				{/* <ColumnsChart /> */}
 				<ExpensesResume />
 				<SegmentedSlider options={options} />
