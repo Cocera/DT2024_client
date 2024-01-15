@@ -7,7 +7,7 @@ import LogoutIcon from "@mui/icons-material/LogoutRounded";
 import { Steps } from "antd";
 const description = "Description.";
 
-const IncidentProgress = () => {
+const IncidenceProgress = () => {
 	return (
 		<Steps
 			direction="vertical"
@@ -47,4 +47,4 @@ const IncidentProgress = () => {
 	);
 };
 
-export default IncidentProgress;
+export default IncidenceProgress;

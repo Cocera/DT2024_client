@@ -5,7 +5,7 @@ import { LeftOutlined } from "@ant-design/icons";
 import SegmentedSlider from "../../components/SegmentedSlider/SegmentedSlider";
 import Cards from "../../components/Cards/Cards";
 import ProfileImage from "../../components/ProfileImage/ProfileImage";
-import IncidentProgress from "../../components/IncidentProgress/IncidentProgress";
+import IncidenceProgress from "../../components/IncidenceProgress/IncidenceProgress";
 
 const CommunityAccount = () => {
 	const [selectedOption, setSelectedOption] = useState("Cuentas");
@@ -147,7 +147,7 @@ const CommunityAccount = () => {
 			) : (
 				<PieChart />
 			)}
-			<IncidentProgress />
+			<IncidenceProgress />
 			<SegmentedSlider options={options} onChange={handleOptionChange} />
 			<Cards cardData={cardData} />
 		</>
