@@ -6,8 +6,12 @@ import { LeftOutlined } from "@ant-design/icons";
 import ColumnsChart from "../../components/ColumnsChart/ColumnsChart";
 import ExpensesResume from "../../components/ExpensesResume/ExpensesResume";
 import MainMenu from "../../components/MainMenu/MainMenu";
+import { useLocation } from 'react-router-dom';
 
 const CommunityAccountHistory = () => {
+	
+	const location = useLocation();
+
 	const options = [
 		{
 			label: (
@@ -42,7 +46,7 @@ const CommunityAccountHistory = () => {
 			</>
 		)
 	}
-	
+
 	if (location.pathname === '/comunidad/cuenta/ingresos') {
 		return (
 			<>

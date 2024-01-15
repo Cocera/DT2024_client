@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom';
 
 
 const Search = () => {
+    
     const location = useLocation();
 
     if (location.pathname === '/comunidad/busqueda') {
