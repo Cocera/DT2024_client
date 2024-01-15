@@ -1,127 +1,4 @@
-// /* NavBarGeneral.css */
-
-// .navigation {
-//     width: 420px;
-//     height: 70px;
-//     background: #fff; /* Change Navigation Color here */
-//     position: relative;
-//     display: flex;
-//     justify-content: center;
-//     z-index: 1;
-//     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-//     border-radius: 10px;
-//   }
-  
-//   .navigation ul {
-//     display: flex;
-//     width: 350px;
-//   }
-  
-//   .list {
-//     position: relative;
-//     list-style: none;
-//     width: 70px;
-//     height: 70px;
-//     z-index: 1;
-//   }
-  
-//   .list a {
-//     position: relative;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     flex-direction: column;
-//     width: 100%;
-//     text-align: center;
-//     font-weight: 500;
-//   }
-  
-//   .list a .icon {
-//     position: relative;
-//     display: block;
-//     line-height: 75px;
-//     font-size: 1.5em;
-//     text-align: center;
-//     transition: 0.5s;
-//     color: #000;
-//     opacity: 0.75;
-//   }
-  
-//   .list.active a .icon {
-//     transform: translateY(-8px);
-//     opacity: 1;
-//     color: #29fd;
-//   }
-  
-//   .indicator {
-//     position: absolute;
-//     top: -10px;
-//     width: 70px;
-//     height: 70px;
-//     border-bottom-left-radius: 35px;
-//     border-bottom-right-radius: 35px;
-//     border: 6px solid var(--clr);
-//     background: var(--clr);
-//     cursor: pointer;
-//     transition: 0.5s;
-//   }
-  
-//   .indicator::before {
-//     content: "";
-//     position: absolute;
-//     top: 4px;
-//     left: -25.75px;
-//     width: 20px;
-//     height: 20px;
-//     border-top-right-radius: 20px;
-//     box-shadow: 4px -6px 0 2px var(--clr);
-//   }
-  
-//   .indicator::after {
-//     content: "";
-//   position: absolute;
-//   top: 4px;
-//   right: -25.75px;
-//   width: 20px;
-//   height: 20px;
-//   border-top-left-radius: 20px;
-//   box-shadow: -4px -6px 0 2px var(--clr);
-//   z-index: -1;
-//   }
-  
-//   .navigation ul li:nth-child(2).active ~ .indicator {
-//     transform: translateX(calc(70px * 1));
-//   }
-  
-//   .navigation ul li:nth-child(3).active ~ .indicator {
-//     transform: translateX(calc(70px * 2));
-//   }
-  
-//   .navigation ul li:nth-child(4).active ~ .indicator {
-//     transform: translateX(calc(70px * 3));
-//   }
-  
-//   .navigation ul li:nth-child(5).active ~ .indicator {
-//     transform: translateX(calc(70px * 4));
-//   }
-  
-//   .indicator span {
-//     position: absolute;
-//   bottom: 3px;
-//   left: -1px;
-//   width: 60px;
-//   height: 60px;
-//   border: 4px solid #29fd;
-//   background: #fff;
-//   border-radius: 50%;
-//   transform-origin: bottom;
-//   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-//   transform: scale(0.85);
-//   }
-  
-
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
-
 
 :root {
   --clr: #ffff;
@@ -137,7 +14,7 @@ body {
 .navigation {
   width: 420px;
   height: 70px;
-  background: #024B59;
+  background: #024b59;
   position: relative;
   display: flex;
   justify-content: center;
@@ -147,7 +24,8 @@ body {
 
   ul {
     display: flex;
-    width: 350px;
+    justify-content: space-evenly;
+    width: 100%;
 
     li {
       position: relative;
@@ -157,9 +35,9 @@ body {
       z-index: 1;
 
       &.active a .icon {
-        transform: translateY(-8px);
+        transform: translateY(-30px);
         opacity: 1;
-        color: #024B59;
+        color: #024b59;
       }
     }
 
@@ -173,19 +51,22 @@ body {
       text-align: center;
       font-weight: 500;
 
-      .icon {
+      .icon  {
         position: relative;
         display: block;
         line-height: 75px;
         font-size: 1.5em;
         text-align: center;
         transition: 0.5s;
-        color: #000;
         opacity: 0.75;
+        transition: 0.5s;
+        // transform: translateY();
       }
     }
   }
-
+.st{
+  transform: translateY(35px);
+}
   .indicator {
     position: absolute;
     top: -35px;
@@ -197,6 +78,7 @@ body {
     background: var(--clr);
     cursor: pointer;
     transition: 0.5s;
+    transform: translateX(calc(100% * var(--active-index)));
 
     &::before {
       content: "";
@@ -205,8 +87,8 @@ body {
       left: -25.75px;
       width: 20px;
       height: 20px;
-      border-top-right-radius: 20px;
-      box-shadow: 4px -6px 0 2px var(--clr);
+      border-top-right-radius: 30px;
+      box-shadow: 0px -10px 0 2px var(--clr);
     }
 
     &::after {
@@ -231,21 +113,23 @@ body {
       background: #ffff;
       border-radius: 50%;
       transform-origin: bottom;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.40);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
       transform: scale(0.85);
     }
   }
 
+  ul li:nth-child(1).active ~ .indicator {
+    transform: translateX(-156px);
+  }
+
   ul li:nth-child(2).active ~ .indicator {
-    transform: translateX(calc(80px * 1));
+    transform: translateX(-51px);
   }
 
   ul li:nth-child(3).active ~ .indicator {
-    transform: translateX(calc(80px * 2));
+    transform: translateX(54.5px);
   }
-
   ul li:nth-child(4).active ~ .indicator {
-    transform: translateX(calc(80px * 3));
+    transform: translateX(159px);
   }
-
 }

@@ -13,13 +13,13 @@ function App() {
 		<>
 			<Router>
 				<Routes>
-					<Route
-						path="/community/account"
-						element={<CommunityAccount />}></Route>
-					<Route path="/profile" element={<Profile />}></Route>
 					<Route path="/" element={<Home />}></Route>
 					<Route
-						path="/community/account/history"
+						path="/comunidad/cuenta"
+						element={<CommunityAccount />}></Route>
+					<Route path="/profile" element={<Profile />}></Route>
+					<Route
+						path="/comunidad/cuenta/historial"
 						element={<CommunityAccountHistory />}></Route>
 					<Route
 						path="/incidencia/busqueda"

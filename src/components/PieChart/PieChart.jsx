@@ -1,4 +1,4 @@
-import { PieChart, Pie, Tooltip, Cell, Label } from "recharts";
+import { PieChart, Pie, Tooltip, Cell, LabelList, Label } from "recharts";
 
 const DonutChart = () => {
 	const data = [
@@ -10,6 +10,8 @@ const DonutChart = () => {
 		{ name: "Icon6", value: 1000 },
 	];
 
+	const totalValue = data.reduce((acc, entry) => acc + entry.value, 0);
+
 	const colors = [
 		"#024B59",
 		"#AB172F",
@@ -19,38 +21,41 @@ const DonutChart = () => {
 		"#A5BEAC",
 	];
 
-	const radian = Math.PI / 180;
-	const renderCustomizedLabel = ({
-		cx,
-		cy,
-		midAngle,
-		innerRadius,
-		outerRadius,
-		percent,
-	}) => {
-		const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-		const x = cx + radius * Math.cos(-midAngle * radian);
-		const y = cy + radius * Math.sin(-midAngle * radian);
-
+	const RADIAN = Math.PI / 180;
+	const renderCustomizedLabel = (props) => {
+		const { cx, cy, viewBox } = props;
+		const radius =
+			viewBox.innerRadius + (viewBox.outerRadius - viewBox.innerRadius) * 0.4;
+		const midAngle = (viewBox.endAngle + viewBox.startAngle) / 2;
+		const x = cx + radius * Math.cos(-midAngle * RADIAN);
+		const y = cy + radius * Math.sin(-midAngle * RADIAN);
+		console.log(props);
+		let percentageCalculated = (props.value / totalValue) * 100;
+		const percentString =
+			percentageCalculated.toFixed(2).replace(".", ",").toString() + "%";
+		console.log("percent", percentString);
+		console.log(typeof percentString);
 		return (
 			<text
+				dy={1}
+				dx={5}
 				x={x}
 				y={y}
 				fill="white"
 				textAnchor={x > cx ? "start" : "end"}
 				dominantBaseline="central">
-				{`${(percent * 100).toFixed(0)}%`}
+				{percentString}
 			</text>
 		);
 	};
 
 	return (
 		<>
-			<h1>Address</h1>
 			<div
 				style={{
 					textAlign: "center",
-					margin: "auto 10%",
+					display: "flex",
+					justifyContent: "center",
 				}}>
 				<PieChart width={700} height={700}>
 					<Tooltip />
@@ -59,12 +64,18 @@ const DonutChart = () => {
 						dataKey="value"
 						outerRadius={250}
 						innerRadius={150}
-						fill="green"
+						fill="#024B59"
 						labelLine={false}
-						label={({ name, value }) => `${name}: ${value}`}
-						// label={renderCustomizedLabel}
-					>
-						<Label value="Total" position="center" />
+						label={({ name }) => `${name}`}>
+						<LabelList
+							dy={-3}
+							fill="white"
+							position="inside"
+							angle="0"
+							stroke="none"
+							content={renderCustomizedLabel}
+						/>
+						<Label value={`Total: €${totalValue}`} position="center" />
 						{data.map((entry, index) => (
 							<Cell
 								key={`cell-${index}`}

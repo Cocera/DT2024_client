@@ -1,13 +1,16 @@
-import React from "react";
 import "./SegmentedSlider.scss";
-import { Avatar, Flex, Segmented, Button, theme } from "antd";
+import { Segmented, theme } from "antd";
 
 const { useToken } = theme;
 
-const SegmentedSlider = ({ options }) => {
+const SegmentedSlider = ({ options, onChange }) => {
 	const { token } = useToken();
 	console.log("main color: ", token.colorPrimary);
 	console.log("secondary color: ", token.colorSecondary);
+
+	const handleOptionClick = (value) => {
+		onChange(value);
+	};
 
 	return (
 		<Segmented
@@ -19,6 +22,7 @@ const SegmentedSlider = ({ options }) => {
 				colorBgLayout: token.colorSecondary,
 			}}
 			options={options}
+			onChange={handleOptionClick}
 			block
 		/>
 	);
