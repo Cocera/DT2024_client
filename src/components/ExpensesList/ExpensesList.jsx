@@ -1,26 +1,26 @@
 import React from "react";
-import "./ExpensesList.scss";
+// import "./ExpensesList.scss";
 import { Avatar, Divider, Flex, List, Skeleton, theme } from 'antd';
-import { DollarOutlined } from '@ant-design/icons';
+import ExpensesDetail from "./ExpensesDetail/ExpensesDetail";
 
 const { useToken } = theme;
 
 const data = [
     {
-        title: 'Gasto número 1',
-        description: 'Detalle del gasto número 1'
+        category: 'Mantenimiento',
+        amount: 305
     },
     {
-        title: 'Gasto número 2',
-        description: 'Detalle del gasto número 2'
+        category: 'Derrama',
+        amount: 2345
     },
     {
-        title: 'Gasto número 3',
-        description: 'Detalle del gasto número 3'
+        category: 'Mantenimiento',
+        amount: 305
     },
     {
-        title: 'Gasto número 4',
-        description: 'Detalle del gasto número 4'
+        category: 'Mantenimiento',
+        amount: 305
     },
 ];
 
@@ -33,10 +33,7 @@ const ExpensesList = () => {
             renderItem={(item, index) => (
                 <List.Item >
                     <List.Item.Meta
-                        // title={<a href="https://ant.design">{item.title}</a>}
-                        avatar={<DollarOutlined />}
-                        title={ item.title }
-                        description={ item.description }
+                        description={ <ExpensesDetail category={item.category} amount={item.amount} /> }
                     />
                 </List.Item>
             )}

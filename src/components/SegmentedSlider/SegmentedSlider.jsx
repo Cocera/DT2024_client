@@ -4,9 +4,8 @@ import { Segmented, theme } from "antd";
 const { useToken } = theme;
 
 const SegmentedSlider = ({ options, onChange }) => {
+	
 	const { token } = useToken();
-	console.log("main color: ", token.colorPrimary);
-	console.log("secondary color: ", token.colorSecondary);
 
 	const handleOptionClick = (value) => {
 		onChange(value);

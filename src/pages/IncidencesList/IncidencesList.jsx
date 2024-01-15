@@ -1,4 +1,5 @@
 import CardImage from "../../components/CardImage/CardImage";
+import Footer from "../../components/Footer/Footer";
 import ProfileImage from "../../components/ProfileImage/ProfileImage";
 import "./IncidencesList.scss";
 import { LeftOutlined } from "@ant-design/icons";
@@ -18,6 +19,7 @@ const IncidencesList = () => {
                 </a>
                 <h1>Direccion de la comunidad</h1>
                 <CardImage/>
+                <Footer/>
     
             </>
         )
@@ -34,6 +36,7 @@ const IncidencesList = () => {
                 </a>
                 <h1>Direccion de la comunidad</h1>
                 <CardImage/>
+                <Footer/>
     
             </>
         )

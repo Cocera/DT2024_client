@@ -3,6 +3,7 @@ import CardImage from "../../components/CardImage/CardImage";
 import { LeftOutlined } from "@ant-design/icons";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import { useLocation } from 'react-router-dom';
+import Footer from "../../components/Footer/Footer";
 
 
 const Search = () => {
@@ -20,6 +21,7 @@ const Search = () => {
                 <SearchBar />
                 <CardImage />
                 <CardImage />
+                <Footer/>
             </>
         )
     }
@@ -35,6 +37,7 @@ const Search = () => {
                 <SearchBar />
                 <CardImage />
                 <CardImage />
+                <Footer/>
             </>
         )
     }
