@@ -38,7 +38,7 @@ const CommunityAccountHistory = () => {
 	if (location.pathname === '/comunidad/cuenta/gastos') {
 		return (
 			<>
-				<Header title="Historial" />
+				<Header title="Historial" community="Av. Reino de Valencia, 87" />
 				<ColumnsChartCustom/>
 				<ExpensesResume />
 				<SegmentedSlider options={options} />
@@ -49,7 +49,7 @@ const CommunityAccountHistory = () => {
 	} else if (location.pathname === '/comunidad/cuenta/ingresos') {
 		return (
 			<>
-				<Header title="Historial" />
+				<Header title="Historial" community="Av. Reino de Valencia, 87" />
 				<ColumnsChartCustom/>
 				<ExpensesResume />
 				<SegmentedSlider options={options} />
