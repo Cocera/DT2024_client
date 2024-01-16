@@ -1,0 +1,26 @@
+$shadow-color: #AF172D;
+$shadow-opacity: 0.25; // 25% de opacidad
+
+@mixin box-shadow($x, $y, $blur, $spread, $color, $opacity) {
+  box-shadow: $x $y $blur $spread rgba($color, $opacity);
+}
+
+button.button-future-expenses {
+    border: 0;
+    background-color: white;
+    border-radius: 16px;
+    min-width: 176px;
+    min-height: 144px;
+    @include box-shadow(2px, 2px, 6px, 0, $shadow-color, $shadow-opacity);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 16px;
+
+    p.text-button-expense {
+        padding: 4px 0px;
+        margin: 0px;
+    }
+}

@@ -1,11 +1,11 @@
 import "./CommunityAccount.scss";
 import { useState } from "react";
 import PieChart from "../../components/PieChart/PieChart";
-import { LeftOutlined } from "@ant-design/icons";
 import SegmentedSlider from "../../components/SegmentedSlider/SegmentedSlider";
 import Cards from "../../components/Cards/Cards";
 import ProfileImage from "../../components/ProfileImage/ProfileImage";
 import IncidenceProgress from "../../components/IncidenceProgress/IncidenceProgress";
+import Header from "../../components/Header/Header";
 
 const CommunityAccount = () => {
 	const [selectedOption, setSelectedOption] = useState("Cuentas");
@@ -136,12 +136,7 @@ const CommunityAccount = () => {
 
 	return (
 		<>
-			<a>
-				{" "}
-				<LeftOutlined />
-				Comunidades
-			</a>
-			<h1>Address</h1>
+			<Header title="Comunidades" community="Av. Reino de Valencia, 87" />			
 			{selectedOption === "Social" ? (
 				<ProfileImage width={300} height={300} />
 			) : (

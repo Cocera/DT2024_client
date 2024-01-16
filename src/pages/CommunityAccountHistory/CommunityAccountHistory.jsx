@@ -2,20 +2,19 @@ import React from "react";
 import "./CommunityAccountHistory.scss";
 import ExpensesList from "../../components/ExpensesList/ExpensesList";
 import SegmentedSlider from "../../components/SegmentedSlider/SegmentedSlider";
-import { LeftOutlined } from "@ant-design/icons";
-import ColumnsChart from "../../components/ColumnsChart/ColumnsChart";
 import ExpensesResume from "../../components/ExpensesResume/ExpensesResume";
-import MainMenu from "../../components/MainMenu/MainMenu";
 import { useLocation } from 'react-router-dom';
 import Footer from "../../components/Footer/Footer";
+import Header from "../../components/Header/Header";
+import ColumnsChartCustom from "../../components/ColumnsChartCustom/ColumnsChartCustom";
 
 const CommunityAccountHistory = () => {
 
 	const location = useLocation();
 
 	const handleOptionClick = (value) => {
-        onChange(value);
-    };
+		onChange(value);
+	};
 
 	const options = [
 		{
@@ -39,31 +38,23 @@ const CommunityAccountHistory = () => {
 	if (location.pathname === '/comunidad/cuenta/gastos') {
 		return (
 			<>
-				<a>
-					{" "}
-					<LeftOutlined />
-					Historial
-				</a>
-				<ColumnsChart />
+				<Header title="Historial" />
+				<ColumnsChartCustom/>
 				<ExpensesResume />
 				<SegmentedSlider options={options} />
 				<ExpensesList />
-				<Footer/>
+				<Footer />
 			</>
 		)
 	} else if (location.pathname === '/comunidad/cuenta/ingresos') {
 		return (
 			<>
-				<a>
-					{" "}
-					<LeftOutlined />
-					Historial
-				</a>
-				<ColumnsChart />
+				<Header title="Historial" />
+				<ColumnsChartCustom/>
 				<ExpensesResume />
 				<SegmentedSlider options={options} />
 				<ExpensesList />
-				<Footer/>
+				<Footer />
 			</>
 		)
 	}

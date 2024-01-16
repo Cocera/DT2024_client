@@ -1,0 +1,12 @@
+div.container-future-expenses {
+    height: 183px;
+    width: auto;
+    min-width: 366px;
+
+    div.container-buttons {
+        display: flex;
+        flex-direction: row wrap;
+        align-items: flex-end;
+        gap: 8px;
+    }
+}

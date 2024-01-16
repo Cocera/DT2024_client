@@ -1,0 +1,27 @@
+// $shadow-color: #AF172D;
+$shadow-color: #000000;
+$shadow-opacity: 0.25;
+
+@mixin box-shadow($x, $y, $blur, $spread, $color, $opacity) {
+    box-shadow: $x $y $blur $spread rgba($color, $opacity);
+}
+
+div.owner-card {
+    border: 0;
+    background-color: white;
+    border-radius: 16px;
+    min-width: 176px;
+    min-height: auto;
+    padding: 8px;
+    @include box-shadow(2px, 2px, 6px, 0, $shadow-color, $shadow-opacity);
+
+    display: flex;
+
+    div.info-container {
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
