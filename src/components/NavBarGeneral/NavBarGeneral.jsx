@@ -16,7 +16,7 @@ const NavBarGeneral = () => {
   return (
     <div className="navigation">
       <ul style={{ '--active-index': activeIndex }}>
-        {['/', '/', '/', '/'].map((route, index) => (
+        {['/', '/incidencia/busqueda', '/comunidad/busqueda', '/'].map((route, index) => (
           <li
             key={index}
             className={`list ${activeIndex === index ? "active" : ""}`}

@@ -24,7 +24,7 @@ const IncidenceInfo = () => {
 			<Header />
 			<IncidenceImage incidence={incidence} />
 			<IncidenceDetail incidence={incidence} />
-			<Button className="btn" type="primary">
+			<Button className="btn-aprobar" type="primary">
 				Aprobar
 			</Button>
 			<IncidenceProgress />
