@@ -14,7 +14,7 @@ function MainMenu() {
   return (
     <div className="container-main-menu">
       <div className="main-menu">
-        <div className="container-turn">
+        <div className="circle-container">
           <button className="circle-button button-one">Boton 1</button>
           <button className="circle-button button-two">Boton 2</button>
           <button className="circle-button button-three">Boton 3</button>
