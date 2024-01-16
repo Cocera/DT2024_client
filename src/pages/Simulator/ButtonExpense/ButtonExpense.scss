@@ -5,22 +5,50 @@ $shadow-opacity: 0.25; // 25% de opacidad
   box-shadow: $x $y $blur $spread rgba($color, $opacity);
 }
 
+
+.material-symbols-rounded {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' -25,
+    'opsz' 20
+}
+
+
 button.button-future-expenses {
-    border: 0;
-    background-color: white;
-    border-radius: 16px;
-    min-width: 176px;
-    min-height: 144px;
-    @include box-shadow(2px, 2px, 6px, 0, $shadow-color, $shadow-opacity);
+  border: 0;
+  background-color: white;
+  border-radius: 16px;
+  min-width: 200px;
+  min-height: 96px;
+  padding: 24px 0px 24px 16px;
+  @include box-shadow(2px, 2px, 6px, 0, $shadow-color, $shadow-opacity);
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
 
-    padding: 16px;
-
-    p.text-button-expense {
-        padding: 4px 0px;
-        margin: 0px;
+  div.container-future-expenses-two {
+    padding-left: 16px;
+    .text-button-expense {
+      padding: 4px 0px;
+      margin: 0px;
+      text-align: left;
     }
+  }
+
+  div.container-future-expenses-one {
+    color: white;
+    border-radius: 8px;
+    width: 34px;
+    height: 34px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      text-align: center;
+      font-size: xx-large;
+    }
+  }
 }

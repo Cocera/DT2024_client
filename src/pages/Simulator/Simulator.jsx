@@ -6,6 +6,7 @@ import { Slider, Card } from 'antd';
 import ButtonExpense from "./ButtonExpense/ButtonExpense";
 import OwnerCard from "./OwnerCard/OwnerCard";
 import { useLocation, useNavigate } from 'react-router-dom';
+import SearchBar from "../../components/SearchBar/SearchBar";
 
 // MAIN, SECONDARY
 const customColors = ['#AB172F', '#024B59'];
@@ -56,10 +57,11 @@ const Simulator = () => {
                 <div className="container-future-expenses">
                     <h4>Gastos previstos</h4>
                     <div className="container-buttons">
-                        <ButtonExpense title="Ascensor" amount="3000" years="5" date="07/2029" />
-                        <ButtonExpense title="Telefonillos" amount="5000" years="7" date="07/2029" />
+                        <ButtonExpense icon="elevator" title="Ascensor" amount="3000" years="5" date="07/2029" />
+                        <ButtonExpense icon="phone_enabled" title="Telefonillos" amount="5000" years="7" date="07/2029" />
                     </div>
                 </div>
+                <SearchBar/>
                 <OwnerCard/>
             </>
         )
