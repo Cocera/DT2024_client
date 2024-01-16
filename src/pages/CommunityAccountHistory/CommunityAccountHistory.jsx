@@ -2,7 +2,6 @@ import React from "react";
 import "./CommunityAccountHistory.scss";
 import ExpensesList from "../../components/ExpensesList/ExpensesList";
 import SegmentedSlider from "../../components/SegmentedSlider/SegmentedSlider";
-import ColumnsChart from "../../components/ColumnsChart/ColumnsChart";
 import ExpensesResume from "../../components/ExpensesResume/ExpensesResume";
 import { useLocation } from 'react-router-dom';
 import Footer from "../../components/Footer/Footer";
@@ -41,7 +40,6 @@ const CommunityAccountHistory = () => {
 			<>
 				<Header title="Historial" />
 				<ColumnsChartCustom/>
-				{/* <ColumnsChart /> */}
 				<ExpensesResume />
 				<SegmentedSlider options={options} />
 				<ExpensesList />
@@ -53,7 +51,6 @@ const CommunityAccountHistory = () => {
 			<>
 				<Header title="Historial" />
 				<ColumnsChartCustom/>
-				{/* <ColumnsChart /> */}
 				<ExpensesResume />
 				<SegmentedSlider options={options} />
 				<ExpensesList />
