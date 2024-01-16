@@ -37,7 +37,10 @@ function App() {
 
 					<Route path="/buscador/comunidad" element={<Search />}></Route>
 					<Route
-						path="/comunidad/incidencias/info"
+						path="/comunidad/incidencias/info/pendiente"
+						element={<IncidenceInfo />}></Route>
+						<Route
+						path="/comunidad/incidencias/info/aprobada"
 						element={<IncidenceInfo />}></Route>
 					<Route
 						path="/simulador/prevision"

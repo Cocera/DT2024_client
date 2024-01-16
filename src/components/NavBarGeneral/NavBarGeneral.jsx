@@ -12,30 +12,31 @@ const NavBarGeneral = () => {
 		setActiveIndex(index);
 	};
 
-	return (
-		<div className="navigation">
-			<ul style={{ "--active-index": activeIndex }}>
-				{["/", "/", "/", "/"].map((route, index) => (
-					<li
-						key={index}
-						className={`list ${activeIndex === index ? "active" : ""}`}
-						onClick={() => handleItemClick(index)}>
-						<NavLink to={route}>
-							<span className="icon">
-								{index === 0 && <HomeIcon isActive={activeIndex === 0} />}
-								{index === 1 && <WarningIcon isActive={activeIndex === 1} />}
-								{index === 2 && <StoreFrontIcon isActive={activeIndex === 2} />}
-								{index === 3 && <ProfileIcon isActive={activeIndex === 3} />}
-							</span>
-						</NavLink>
-					</li>
-				))}
-				<div className="indicator">
-					<span></span>
-				</div>
-			</ul>
-		</div>
-	);
+  return (
+    <div className="navigation">
+      <ul style={{ '--active-index': activeIndex }}>
+        {['/', '/incidencia/busqueda', '/comunidad/busqueda', '/'].map((route, index) => (
+          <li
+            key={index}
+            className={`list ${activeIndex === index ? "active" : ""}`}
+            onClick={() => handleItemClick(index)}
+          >
+            <NavLink to={route}>
+              <span className="icon">
+                {index === 0 && <HomeIcon isActive={activeIndex === 0} />}
+                {index === 1 && <WarningIcon isActive={activeIndex === 1} />}
+                {index === 2 && <StoreFrontIcon isActive={activeIndex === 2} />}
+                {index === 3 && <ProfileIcon isActive={activeIndex === 3} />}
+              </span>
+            </NavLink>
+          </li>
+        ))}
+        <div className="indicator">
+          <span></span>
+        </div>
+      </ul>
+    </div>
+  );
 };
 
 export default NavBarGeneral;
