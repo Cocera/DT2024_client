@@ -2,6 +2,7 @@ import "./Home.scss";
 import backgroundImg from "../../assets/Images/Home_image.png";
 import ButtonHome from "./ButtonHome/ButtonHome";
 
+import LogoApp from '../../assets/Logo_TuAppMin2.png';
 import IconCommunityHome from '../../assets/HomeIcons/comunidad_icon.png';
 import IconDocumentsHome from '../../assets/HomeIcons/documents_icon.png';
 import IconIncidencesHome from '../../assets/HomeIcons/incidences_icon.png';
@@ -13,6 +14,10 @@ const Homepage = () => {
   return (
     <>
       <main className="home-main">
+        <div className="home-welcome-logo">
+          <h2>¡Hola <br /> Pablo!</h2>
+          <img src={LogoApp} alt="" />
+        </div>
         <div className="container-home-buttons">
           <ButtonHome icon={IconCommunityHome} title="Comunidad" route="/comunidad/busqueda" />
           <ButtonHome icon={IconIncidencesHome} title="Incidencias" route="/incidencia/busqueda" />
