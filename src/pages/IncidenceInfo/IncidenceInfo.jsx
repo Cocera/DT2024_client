@@ -21,12 +21,13 @@ const incidence = {
 const IncidenceInfo = () => {
 	return (
 		<>
-			<Header />
+			<Header title="Pendientes/Humedad en la escalera" community="Av.Reino de Valencia, 87"/>
+		
 			<IncidenceImage incidence={incidence} />
 			<IncidenceDetail incidence={incidence} />
-			<Button className="btn-aprobar" type="primary">
+			<div className="div-btn-aprobar" ><Button className="btn-aprobar" type="primary">
 				Aprobar
-			</Button>
+			</Button></div>
 			<IncidenceProgress />
 			<Footer/>
 		</>

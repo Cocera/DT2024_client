@@ -1,3 +1,5 @@
+import "../../pages/IncidenceInfo/IncidenceInfo.scss"
+
 const IncidenceDetail = ({ incidence }) => {
 	console.log(incidence);
 	return (
@@ -14,7 +16,7 @@ const IncidenceDetail = ({ incidence }) => {
 			<h6>Fecha de incidencia:</h6>
 			<p>{incidence.date}</p>
 		</div>
-	);
+	);	
 };
 
 export default IncidenceDetail;

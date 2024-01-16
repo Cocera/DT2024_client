@@ -14,7 +14,7 @@ const IncidenceImage = ({ incidence }) => {
 		);
 	}
 	return (
-		<>
+		<div className="container-incidence-info">
 			<Image
 				className="img"
 				src={incidence.image}
@@ -22,7 +22,7 @@ const IncidenceImage = ({ incidence }) => {
 				height="auto"
 				style={{ preview: false }}
 			/>
-		</>
+		</div>
 	);
 };
 
