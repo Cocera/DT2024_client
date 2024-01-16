@@ -8,6 +8,7 @@ import CommunityAccountHistory from "./pages/CommunityAccountHistory/CommunityAc
 import Search from "./pages/Search/Search";
 import IncidencesList from "./pages/IncidencesList/IncidencesList";
 import IncidenceInfo from "./pages/IncidenceInfo/IncidenceInfo";
+import Simulator from "./pages/Simulator/Simulator";
 
 function App() {
 	return (
@@ -38,6 +39,12 @@ function App() {
 					<Route
 						path="/comunidad/incidencias/info"
 						element={<IncidenceInfo />}></Route>
+					<Route
+						path="/simulador/prevision"
+						element={<Simulator />}></Route>
+					<Route
+						path="/simulador/fondos"
+						element={<Simulator />}></Route>
 					{/* <Route path="*" element={<NotFound />}></Route> */}
 				</Routes>
 			</Router>

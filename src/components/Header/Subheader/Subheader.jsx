@@ -9,7 +9,7 @@ const Subheader = (params) => {
                 <LeftOutlined />
                 <div>
                     <p>{params.title}</p>
-                    {params.community ? <p>{params.community}</p> : ""}
+                    {params.community ? <p className="community-address">{params.community}</p> : ""}
                     
                 </div>
             </div>
