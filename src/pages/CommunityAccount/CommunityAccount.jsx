@@ -4,7 +4,6 @@ import PieChart from "../../components/PieChart/PieChart";
 import SegmentedSlider from "../../components/SegmentedSlider/SegmentedSlider";
 import Cards from "../../components/Cards/Cards";
 import ProfileImage from "../../components/ProfileImage/ProfileImage";
-import IncidenceProgress from "../../components/IncidenceProgress/IncidenceProgress";
 import Header from "../../components/Header/Header";
 
 const CommunityAccount = () => {
@@ -136,13 +135,12 @@ const CommunityAccount = () => {
 
 	return (
 		<>
-			<Header title="Comunidades" community="Av. Reino de Valencia, 87" />			
+			<Header title="Comunidades" community="Av. Reino de Valencia, 87" />
 			{selectedOption === "Social" ? (
 				<ProfileImage width={300} height={300} />
 			) : (
 				<PieChart />
 			)}
-			<IncidenceProgress />
 			<SegmentedSlider options={options} onChange={handleOptionChange} />
 			<Cards cardData={cardData} />
 		</>
