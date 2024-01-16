@@ -1,9 +1,18 @@
-div.home-page {
-    width: 100vw;
-    height: 120vh;
-    background-image: url("../../assets/Images/Home_image.png"); 
-    background-size: cover; 
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Do not repeat the background image */
-  }
+// div.home-page {
+//     width: 100vw;
+//     height: 120vh;
+//     background-image: url("../../assets/Images/Home_image.png"); 
+//     background-size: cover; 
+//     background-position: center; 
+//     background-repeat: no-repeat; 
+//   }
+
+.container-home-buttons {
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
   
