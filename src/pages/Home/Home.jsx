@@ -14,13 +14,12 @@ const Homepage = () => {
   return (
     <>
       <div className="container-home-buttons">
-        <ButtonHome icon={IconCommunityHome} title="Comunidad" />
-        <ButtonHome icon={IconIncidencesHome} title="Incidencias" />
-        <ButtonHome icon={IconSuppliersHome} title="Proveedores" />
-        <ButtonHome icon={IconTranscriptionHome} title="Transcripción" />
-        <ButtonHome icon={IconDocumentsHome} title="Documentos" />
-        <ButtonHome icon={IconProfileHome} title="Perfil" />
-
+        <ButtonHome icon={IconCommunityHome} title="Comunidad" route="/comunidad/busqueda" />
+        <ButtonHome icon={IconIncidencesHome} title="Incidencias" route="/incidencia/busqueda" />
+        <ButtonHome icon={IconSuppliersHome} title="Proveedores" route="" />
+        <ButtonHome icon={IconTranscriptionHome} title="Transcripción" route="" />
+        <ButtonHome icon={IconDocumentsHome} title="Documentos" route="" />
+        <ButtonHome icon={IconProfileHome} title="Perfil" route="" />
       </div>
     </>
   );
