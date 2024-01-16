@@ -1,5 +1,4 @@
 import CardImage from "../../components/CardImage/CardImage";
-import { LeftOutlined } from "@ant-design/icons";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import { useLocation } from 'react-router-dom';
 import Footer from "../../components/Footer/Footer";
@@ -25,11 +24,7 @@ const Search = () => {
     if (location.pathname === '/incidencia/busqueda') {
         return (
             <>
-                <a>
-                    {" "}
-                    <LeftOutlined />
-                    Incidencias
-                </a>
+                <Header title="Incidencias" />
                 <SearchBar />
                 <CardImage />
                 <CardImage />
