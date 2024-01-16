@@ -17,7 +17,7 @@ const Homepage = () => {
         <ButtonHome icon={IconCommunityHome} title="Comunidad" route="/comunidad/busqueda" />
         <ButtonHome icon={IconIncidencesHome} title="Incidencias" route="/incidencia/busqueda" />
         <ButtonHome icon={IconSuppliersHome} title="Proveedores" route="" />
-        <ButtonHome icon={IconTranscriptionHome} title="Transcripción" route="" />
+        <ButtonHome icon={IconTranscriptionHome} title="Transcripción" route="" /> 
         <ButtonHome icon={IconDocumentsHome} title="Documentos" route="" />
         <ButtonHome icon={IconProfileHome} title="Perfil" route="" />
       </div>
