@@ -7,7 +7,7 @@ const ColumnsChartCustom = () => {
     return (
         <>
             <Flex align="flex-end" justify="space-evenly" gap={8} style={{height: 128, padding:18}}>
-                <ColumnsChartMonth month="ene" />
+                <ColumnsChartMonth month="ene" active="true" />
                 <ColumnsChartMonth month="feb" />
                 <ColumnsChartMonth month="mar" />
                 <ColumnsChartMonth month="abr" />

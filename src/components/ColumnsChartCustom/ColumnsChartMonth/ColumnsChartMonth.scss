@@ -14,12 +14,22 @@
 
         .first-bar {
             width: 10px;
-            height: 50%;
+            height: 5px;
             border-radius: 10px;
         }
         .second-bar {
             width: 10px;
-            height: 85%;
+            height: 5px;
+            border-radius: 10px;
+        }
+        .first-bar-active {
+            width: 10px;
+            height: 70%;
+            border-radius: 10px;
+        }
+        .second-bar-active {
+            width: 10px;
+            height: 20%;
             border-radius: 10px;
         }
     }
