@@ -4,6 +4,7 @@ import IncidenceImage from "../../components/IncidenceImage/IncidenceImage";
 import IncidenceProgress from "../../components/IncidenceProgress/IncidenceProgress";
 import IncidenceDetail from "../../components/IncidenceDetail/IncidenceDetail";
 import { Button } from "antd";
+import Footer from "../../components/Footer/Footer.jsx"
 
 const incidence = {
 	community: "",
@@ -27,6 +28,7 @@ const IncidenceInfo = () => {
 				Aprobar
 			</Button>
 			<IncidenceProgress />
+			<Footer/>
 		</>
 	);
 };

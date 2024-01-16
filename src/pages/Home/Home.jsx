@@ -4,9 +4,10 @@ import Footer from "../../components/Footer/Footer";
 import MainMenu from "../../components/MainMenu/MainMenu";
 const Homepage = () => {
   return (
-    <div>
+    <div className="home-page">
     
       <MainMenu />
+      
       
     </div>
   );
