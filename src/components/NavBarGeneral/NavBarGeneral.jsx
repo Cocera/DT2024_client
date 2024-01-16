@@ -4,6 +4,7 @@ import WarningIcon from "../../assets/WarningIcon/WarningIcon";
 import StoreFrontIcon from "../../assets/StoreFrontIcon/StoreFrontIcon";
 import ProfileIcon from "../../assets/ProfileIcon/ProfileIcon";
 import "./NavBarGeneral.scss";
+import { useState } from "react";
 
 const NavBarGeneral = () => {
 	const [activeIndex, setActiveIndex] = useState(0);
