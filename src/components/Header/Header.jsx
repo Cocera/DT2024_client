@@ -1,15 +1,18 @@
 import React from "react";
 import './Header.scss';
 import Subheader from "./Subheader/Subheader";
-import logoImg from "../../assets/logo_sinfondo.png"
+import logoImg from "../../assets/Logo_TuAppMin.png"
+import { Link } from "react-router-dom";
 
 const Header = (params) => {
   return (
     <>
-      <div className="main-header">
-        <img className="logo" src={logoImg} alt="logo" />
-      </div>
-      {params.title ? <Subheader title={params.title} community={params.community} /> : ""}
+      <Link to="/">
+        <div className="main-header secondary-color-bg">
+          <img className="logo" src={logoImg} alt="logo" />
+        </div>
+      </Link>
+      {params.title ? <Subheader title={params.title} community={params.community} route={params.route} /> : ""}
     </>
   );
 };
