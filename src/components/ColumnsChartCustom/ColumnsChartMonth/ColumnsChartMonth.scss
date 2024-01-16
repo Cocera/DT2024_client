@@ -10,14 +10,15 @@
         display: flex;
         flex-flow: row nowrap;
         align-items: flex-end;
+        justify-content: center;
 
         .first-bar {
-            width: 14px;
+            width: 10px;
             height: 50%;
             border-radius: 10px;
         }
         .second-bar {
-            width: 14px;
+            width: 10px;
             height: 85%;
             border-radius: 10px;
         }
