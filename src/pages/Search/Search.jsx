@@ -47,7 +47,7 @@ const Search = () => {
 			<Header
 				title={searchType === "communities" ? "Comunidades" : "Incidencias"}
 			/>
-			<Flex justify="" align="" vertical="" wrap="" style={{ padding: 18}}>
+			<Flex justify="" align="center" vertical="true" style={{ paddingLeft: 18, paddingRight: 18 }}>
 
 				<SearchBar
 					onSearchTypeChange={handleSearchTypeChange}
