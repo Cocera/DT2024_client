@@ -1,4 +1,6 @@
-.ant-image-1234 {
+.profile-image-rounded {
+
+  .ant-image {
     overflow: hidden;
     border-radius: 100px;
     position: relative;
@@ -9,4 +11,7 @@
       width: 100%;
       height: 100%;
     }
+
   }
+
+}
