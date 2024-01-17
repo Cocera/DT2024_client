@@ -1,15 +1,6 @@
 import { PieChart, Pie, Tooltip, Cell, LabelList, Label } from "recharts";
 
-const DonutChart = () => {
-	const data = [
-		{ name: "Icon1", value: 400 },
-		{ name: "Icon2", value: 700 },
-		{ name: "Icon3", value: 200 },
-		{ name: "Icon4", value: 1000 },
-		{ name: "Icon5", value: 200 },
-		{ name: "Icon6", value: 1000 },
-	];
-
+const DonutChart = ({ data, type, selectedOption }) => {
 	const totalValue = data.reduce((acc, entry) => acc + entry.value, 0);
 
 	const colors = [
@@ -22,26 +13,6 @@ const DonutChart = () => {
 	];
 	const RADIAN = Math.PI / 180;
 
-	// const renderIcon = (props) => {
-	// 	const { cx, cy, midAngle, innerRadius, outerRadius } = props;
-	// 	const radius = outerRadius + 30; // Adjust this value as needed
-	// 	const x = cx + radius * Math.cos(-midAngle * RADIAN); // Adjust for icon size
-	// 	const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
-	// 	// Conditionally render the appropriate icon based on the name
-	// 	switch (props.payload.name) {
-	// 		case "Icon1":
-	// 			return <LightBulbIcon cx={x} cy={y} />;
-	// 		case "Icon2":
-	// 			return <LightBulbIcon cx={x} cy={y} />;
-	// 		case "Icon3":
-	// 			return <LightBulbIcon cx={x} cy={y} />;
-	// 		// Add more cases as needed for each icon
-	// 		default:
-	// 			return null; // Return null for default case or when no match is found
-	// 	}
-	// };
-
 	const renderCustomizedLabel = (props) => {
 		const { cx, cy, viewBox } = props;
 		const radius =
@@ -49,12 +20,10 @@ const DonutChart = () => {
 		const midAngle = (viewBox.endAngle + viewBox.startAngle) / 2;
 		const x = cx + radius * Math.cos(-midAngle * RADIAN);
 		const y = cy + radius * Math.sin(-midAngle * RADIAN);
-		console.log(props);
 		let percentageCalculated = (props.value / totalValue) * 100;
 		const percentString =
 			percentageCalculated.toFixed(2).replace(".", ",").toString() + "%";
-		console.log("percent", percentString);
-		console.log(typeof percentString);
+
 		return (
 			<text
 				dy={1}
@@ -95,7 +64,14 @@ const DonutChart = () => {
 							stroke="none"
 							content={renderCustomizedLabel}
 						/>
-						<Label value={`Total: €${totalValue}`} position="center" />
+						{type === "incidences" ? (
+							<Label
+								value={`Total ${selectedOption}: ${totalValue}`}
+								position="center"
+							/>
+						) : (
+							<Label value={`Total Gastos: €${totalValue}`} position="center" />
+						)}
 						{data.map((entry, index) => (
 							<Cell
 								key={`cell-${index}`}
