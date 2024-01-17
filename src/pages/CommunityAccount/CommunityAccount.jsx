@@ -136,7 +136,7 @@ const CommunityAccount = () => {
 
 	return (
 		<>
-			<Header title="Comunidades" community="Av. Reino de Valencia, 87" />
+			<Header title="Comunidades" community="Calle Doctor Moliner, 27" />
 			{selectedOption === "Social" ? (
 				<ProfileImage width={300} height={300} />
 			) : (

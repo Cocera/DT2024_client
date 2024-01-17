@@ -24,7 +24,7 @@ const IncidenceInfo = () => {
     <>
       <Header
         title="Pendientes/Humedad en la escalera"
-        community="Av.Reino de Valencia, 87"
+        community="Calle Doctor Moliner, 27"
       />
       <IncidenceImage incidence={incidence}/>
       

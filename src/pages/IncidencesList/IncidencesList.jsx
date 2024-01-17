@@ -11,7 +11,7 @@ const IncidencesList = () => {
     if (location.pathname === '/comunidad/incidencias/activas') {
         return (
             <>
-                <Header title="Activas" community="Dirección comunidad" />
+                <Header title="Activas" community="Calle Doctor Moliner, 27" />
                 <CardImage />
                 <Footer />
 
@@ -22,7 +22,7 @@ const IncidencesList = () => {
     if (location.pathname === '/comunidad/incidencias/pendientes') {
         return (
             <>
-                <Header title="Pendientes" community="Dirección comunidad" />
+                <Header title="Pendientes" community="Calle Doctor Moliner, 27" />
                 <CardImage />
                 <Footer />
 
