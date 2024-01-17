@@ -13,7 +13,7 @@ const Search = () => {
 	const { getAccessTokenSilently } = useAuth0();
 	const location = useLocation();
 	const { communities } = useSelector((state) => state.communities);
-	const incidences = useSelector((state) => state.incidences);
+	const { incidences } = useSelector((state) => state.incidences);
 	const [searchType, setSearchType] = useState(
 		location.pathname === "/comunidad/busqueda" ? "communities" : "incidences"
 	);
