@@ -26,7 +26,7 @@ const getCommunityByAddress = async (address) => {
 const getCommunityById = async (_id) => {
 	const token = JSON.parse(localStorage.getItem("token"));
 
-	const res = await axios.get(API_URL + _id, {
+	const res = await axios.get(`${API_URL}/${_id}`, {
 		headers: {
 			Authorization: `Bearer ${token}`,
 		},

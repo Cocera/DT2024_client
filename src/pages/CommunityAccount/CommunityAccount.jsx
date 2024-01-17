@@ -2,51 +2,43 @@ import "./CommunityAccount.scss";
 import { useEffect, useState } from "react";
 import PieChart from "../../components/PieChart/PieChart";
 import SegmentedSlider from "../../components/SegmentedSlider/SegmentedSlider";
-import Cards from "../../components/Cards/Cards";
 import ProfileImage from "../../components/ProfileImage/ProfileImage";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import CardDetail from "../../components/CardDetail/CardDetail";
 import { useDispatch, useSelector } from "react-redux";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useLocation } from "react-router-dom";
 import { Flex } from "antd";
+import getUserMetadata from "../../features/auth/authService";
+import { getById } from "../../features/communities/communitySlice";
 
 const CommunityAccount = () => {
 	const dispatch = useDispatch();
 	const { getAccessTokenSilently } = useAuth0();
-	const { communities } = useSelector((state) => state.communities);
 
 	const location = useLocation();
 	const type = location.pathname.includes("/comunidad/cuentas")
 		? "communities"
 		: "incidences";
 
+	const { community } = useSelector((state) => state.communities);
+	const [communityData, setCommunityData] = useState([]);
+
 	useEffect(() => {
-		const getUserMetadata = async () => {
-			const domain = "http://localhost:8080";
+		if (community.gastos) {
+			const gastosArray = Object.entries(community.gastos).map(([k, v]) => ({
+				name: k,
+				value: v,
+			}));
+			setCommunityData(gastosArray);
+		}
+	}, [community.gastos]);
 
-			try {
-				const accessToken = await getAccessTokenSilently({
-					authorizationParams: {
-						audience: `${domain}`,
-					},
-				});
-				localStorage.setItem("token", JSON.stringify(accessToken));
-			} catch (e) {
-				console.error(e.message);
-			}
-		};
-		getUserMetadata();
-	}, [getAccessTokenSilently, dispatch]);
-
-	const communityData = [
-		{ name: "Icon1", value: 400 },
-		{ name: "Icon2", value: 700 },
-		{ name: "Icon3", value: 200 },
-		{ name: "Icon4", value: 1000 },
-		{ name: "Icon5", value: 200 },
-		{ name: "Icon6", value: 1000 },
-	];
+	useEffect(() => {
+		getUserMetadata(getAccessTokenSilently);
+		dispatch(getById(location.state._id));
+	}, [getAccessTokenSilently, dispatch, location]);
 
 	const incidenceData = [
 		{ name: "Icon1", value: 8 },
@@ -193,7 +185,6 @@ const CommunityAccount = () => {
 		<>
 			<Header title="Comunidades" community="Calle Doctor Moliner, 27" />
 			<div className="container-pie-chart">
-
 				{selectedOption === "Social" ? (
 					<ProfileImage width={300} height={300} />
 				) : (
@@ -204,15 +195,12 @@ const CommunityAccount = () => {
 					/>
 				)}
 			</div>
-
-			{/* <Flex vertical="true" align="strecht" style={{ paddingLeft: 28, paddingRight: 28 }}> */}
 			<section className="container-card-data-community">
 				<SegmentedSlider options={options} onChange={handleOptionChange} />
 				<div className="container-margins">
 					<Cards cardData={cardData} />
 				</div>
 			</section>
-			{/* </Flex> */}
 			<Footer />
 		</>
 	);

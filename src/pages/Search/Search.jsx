@@ -8,7 +8,8 @@ import { useEffect, useState } from "react";
 import { getAll } from "../../features/communities/communitySlice";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Flex, FloatButton } from "antd";
-import { PlusOutlined } from '@ant-design/icons';
+import { PlusOutlined } from "@ant-design/icons";
+import getUserMetadata from "../../features/auth/authService";
 
 const Search = () => {
 	const dispatch = useDispatch();
@@ -21,22 +22,8 @@ const Search = () => {
 	);
 
 	useEffect(() => {
-		const getUserMetadata = async () => {
-			const domain = "http://localhost:8080";
-
-			try {
-				const accessToken = await getAccessTokenSilently({
-					authorizationParams: {
-						audience: `${domain}`,
-					},
-				});
-				localStorage.setItem("token", JSON.stringify(accessToken));
-				dispatch(getAll());
-			} catch (e) {
-				console.error(e.message);
-			}
-		};
-		getUserMetadata();
+		getUserMetadata(getAccessTokenSilently);
+		dispatch(getAll());
 	}, [getAccessTokenSilently, dispatch]);
 
 	const handleSearchTypeChange = (type) => {
@@ -59,8 +46,11 @@ const Search = () => {
 				}}
 				icon={<PlusOutlined />}
 			/>
-			<Flex justify="" align="center" vertical="true" style={{ paddingLeft: 18, paddingRight: 18 }}>
-
+			<Flex
+				justify=""
+				align="center"
+				vertical="true"
+				style={{ paddingLeft: 18, paddingRight: 18 }}>
 				<SearchBar
 					onSearchTypeChange={handleSearchTypeChange}
 					searchType={searchType}
