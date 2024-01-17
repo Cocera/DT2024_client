@@ -20,6 +20,9 @@ function App() {
 					<Route
 						path="/comunidad/cuenta"
 						element={<CommunityAccount />}></Route>
+					<Route
+						path="/comunidad/incidencias"
+						element={<CommunityAccount />}></Route>
 					<Route path="/perfil" element={<Profile />}></Route>
 					<Route
 						path="/comunidad/cuenta/gastos"
@@ -41,16 +44,12 @@ function App() {
 					<Route
 						path="/comunidad/incidencias/info/pendiente"
 						element={<IncidenceInfo />}></Route>
-						<Route
+					<Route
 						path="/comunidad/incidencias/info/aprobada"
 						element={<IncidenceInfo />}></Route>
-					<Route
-						path="/simulador/prevision"
-						element={<Simulator />}></Route>
+					<Route path="/simulador/prevision" element={<Simulator />}></Route>
 					{/* <Route path="*" element={<NotFound />}></Route> */}
-					<Route
-						path="/signin"
-						element={<SignIn />}></Route>
+					<Route path="/signin" element={<SignIn />}></Route>
 				</Routes>
 			</Router>
 		</>

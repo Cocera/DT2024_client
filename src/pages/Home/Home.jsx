@@ -25,7 +25,7 @@ const Homepage = () => {
 				<main className="home-main">
 					<div className="home-welcome-logo">
 						<h2>
-							¡Hola <br /> {user.name}!
+							¡Hola <br /> {user.name.split(" ")[0]}!
 						</h2>
 						<img src={LogoApp} alt="" />
 					</div>
