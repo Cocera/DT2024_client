@@ -14,14 +14,17 @@ $shadow-opacity: 0.15;
     'opsz' 20
 }
 
+.active-expense {
+  border: 2px solid #024B59 !important;
+}
 
 button.button-future-expenses {
   border: 0;
   background-color: white;
   border-radius: 16px;
-  min-width: 200px;
+  min-width: 185px;
   min-height: 96px;
-  padding: 20px 0px 20px 15px;
+  padding: 10px 0px 10px 10px;
   @include box-shadow(2px, 2px, 6px, 0, $shadow-color, $shadow-opacity);
 
   display: flex;
@@ -29,6 +32,7 @@ button.button-future-expenses {
 
   div.container-future-expenses-two {
     padding-left: 16px;
+
     .text-button-expense {
       padding: 4px 0px;
       margin: 0px;
