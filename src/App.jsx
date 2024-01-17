@@ -18,7 +18,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Home />}></Route>
 					<Route
-						path="/comunidad/cuenta"
+						path="/comunidad/cuenta/65a732acd06ef98cb6409214"
 						element={<CommunityAccount />}></Route>
 					<Route
 						path="/comunidad/incidencias"
