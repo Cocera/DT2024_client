@@ -19,6 +19,7 @@
     width: 100%;
     padding: 0;
     margin-left: 0;
+    align-items: center;
 
     li {
       position: relative;
@@ -53,7 +54,7 @@
         transition: 0.5s;
         opacity: 0.75;
         transition: 0.5s;
-        // transform: translateY();
+        
       }
     }
   }
@@ -72,6 +73,7 @@
     cursor: pointer;
     transition: 0.5s;
     transform: translateX(calc(100% * var(--active-index)));
+    
 
     &::before {
       content: "";
@@ -112,17 +114,17 @@
   }
 
   ul li:nth-child(1).active ~ .indicator {
-    transform: translateX(-156px);
+    transform: translateX(-148px);
   }
 
   ul li:nth-child(2).active ~ .indicator {
-    transform: translateX(-51px);
+    transform: translateX(-48.5px);
   }
 
   ul li:nth-child(3).active ~ .indicator {
-    transform: translateX(54.5px);
+    transform: translateX(52.5px);
   }
   ul li:nth-child(4).active ~ .indicator {
-    transform: translateX(159px);
+    transform: translateX(152px);
   }
 }
