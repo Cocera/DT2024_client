@@ -12,7 +12,6 @@ const CardImage = () => {
                     <h4>Nombre dirección</h4>
                     <p>Card content</p>
                     <p>Card content</p>
-                    <p>Card content</p>
                 </Card>
             </div>
         </>
