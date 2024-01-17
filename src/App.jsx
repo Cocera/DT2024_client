@@ -9,6 +9,7 @@ import Search from "./pages/Search/Search";
 import IncidencesList from "./pages/IncidencesList/IncidencesList";
 import IncidenceInfo from "./pages/IncidenceInfo/IncidenceInfo";
 import Simulator from "./pages/Simulator/Simulator";
+import SignIn from "./pages/SignIn/SignIn";
 
 function App() {
 	return (
@@ -49,6 +50,9 @@ function App() {
 						path="/simulador/fondos"
 						element={<Simulator />}></Route>
 					{/* <Route path="*" element={<NotFound />}></Route> */}
+					<Route
+						path="/signin"
+						element={<SignIn />}></Route>
 				</Routes>
 			</Router>
 		</>
