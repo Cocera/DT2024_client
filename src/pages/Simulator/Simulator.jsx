@@ -4,12 +4,14 @@ import Header from "../../components/Header/Header";
 import ButtonExpense from "./ButtonExpense/ButtonExpense";
 import OwnerCard from "./OwnerCard/OwnerCard";
 import SearchBar from "../../components/SearchBar/SearchBar";
+import { Flex } from "antd";
 
 const Simulator = () => {
     return (
         <>
             <Header title="Simulador" community="Av. Reino de Valencia, 87" />
             <main>
+            <Flex justify="" align="center" vertical="true" style={{ paddingLeft: 18, paddingRight: 18 }}>
                 <div className="container-future-expenses margin-top-28">
                     <h4 className="secondary-color">Gastos previstos</h4>
                     <div className="container-buttons margin-top-28">
@@ -28,6 +30,7 @@ const Simulator = () => {
                     <OwnerCard ownerId="A4" actualAmount="40" newAmount="70" />
                     <OwnerCard ownerId="A5" actualAmount="40" newAmount="70" />
                 </div>
+                </Flex>
             </main>
         </>
     )
