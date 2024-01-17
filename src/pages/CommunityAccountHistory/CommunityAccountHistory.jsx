@@ -44,10 +44,10 @@ const CommunityAccountHistory = () => {
 		},
 	];
 
-	if (location.pathname === '/comunidad/cuenta/gastos') {
+	if (location.pathname === '/comunidad/cuenta/historial') {
 		return (
 			<>
-				<Header title="Historial" community="Av. Reino de Valencia, 87" />
+				<Header title="Historial" community="Calle Doctor Moliner, 27" />
 				<ColumnsChartCustom/>
 				<ExpensesResume />
 				<SegmentedSlider options={options} onChange={handleOptionClick} />

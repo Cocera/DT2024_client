@@ -1,4 +1,3 @@
-import "./PieChart.scss";
 import { PieChart, Pie, Tooltip, Cell, LabelList, Label } from "recharts";
 
 const DonutChart = ({ data, type, selectedOption }) => {

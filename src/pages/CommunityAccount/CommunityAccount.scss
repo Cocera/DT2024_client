@@ -1,12 +1,30 @@
-.container-pie-chart {
+div.container-pie-chart {
     width: 428px;
     height: 358px;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
+
+    div.recharts-wrapper {
+        width: 428px !important;
+        height: 358px !important;
+    }
 }
 
-.container-margins {
-    margin: 28px 0px;
-    margin-bottom: 150px;
+section.container-card-data-community {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    padding: 0px 28px;
+    z-index: 3;
+
+    .container-margins {
+        margin: 28px 0px;
+        margin-bottom: 150px;
+
+        a {
+            text-decoration: none;
+        }
+    }
 }
