@@ -2,9 +2,9 @@ import React from "react";
 import "./CardImage.scss";
 import ProfileImage from "../../components/ProfileImage/ProfileImage";
 import { Card } from "antd";
+import { Link } from "react-router-dom";
 
 const CardImage = ({ items, searchType }) => {
-    console.log(items);
     const renderItem = (item) => {
         if (searchType === "communities") {
             return (
@@ -30,10 +30,12 @@ const CardImage = ({ items, searchType }) => {
     };
 
     const allItems = items.map((item) => (
-        <div key={item._id} className="card-image-container">
-            <ProfileImage width={115} height={115} src={item.image} />
-            <Card style={{ width: 300, height: 128 }}>{renderItem(item)}</Card>
-        </div>
+        <Link to={`/comunidad/cuenta/${item._id}`}>
+            <div key={item._id} className="card-image-container">
+                <ProfileImage width={115} height={115} src={item.image} />
+                <Card style={{ width: 300, height: 128 }}>{renderItem(item)}</Card>
+            </div>
+        </Link>
     ));
 
     return <>{allItems}</>;

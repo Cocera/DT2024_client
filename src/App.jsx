@@ -25,6 +25,9 @@ function App() {
 						path="/comunidad/cuenta/gastos"
 						element={<CommunityAccountHistory />}></Route>
 					<Route
+						path="/comunidad/cuenta/doctor-moliner-27"
+						element={<CommunityAccountHistory />}></Route>
+					<Route
 						path="/comunidad/cuenta/ingresos"
 						element={<CommunityAccountHistory />}></Route>
 					<Route path="/incidencia/busqueda" element={<Search />}></Route>
