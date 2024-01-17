@@ -1,14 +1,17 @@
-div.main-header{
+.main-header {
+    position: sticky;
+    top: 0;
     height: 60px;
     width: auto;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
-    
-
+    z-index: 100;
+  
     .logo {
-        width: 218px;
-        padding-left: 18px;
+      width: 218px;
+      padding-left: 18px;
     }  
-}
+  }
+  
