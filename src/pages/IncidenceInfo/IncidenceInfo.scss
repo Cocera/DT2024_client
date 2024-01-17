@@ -43,6 +43,7 @@ p {
 .div-btn-aprobar {
   display: flex;
   justify-content: center;
+  margin-bottom: 128px;
 
   .btn-aprobar {
     width: 224px;
@@ -55,3 +56,6 @@ p {
   }
 }
 
+.time-line-container {
+  margin-top: 24px;
+}

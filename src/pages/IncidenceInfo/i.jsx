@@ -1,12 +1,13 @@
-import React, { useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+
+import React from "react";
 import "./IncidenceInfo.scss";
 import Header from "../../components/Header/Header";
 import IncidenceImage from "../../components/IncidenceImage/IncidenceImage";
+// import IncidenceProgress from "../../components/IncidenceProgress/IncidenceProgress";
 import IncidenceDetail from "../../components/IncidenceDetail/IncidenceDetail";
 import { Button } from "antd";
 import Footer from "../../components/Footer/Footer.jsx";
-import TimeLine from "../../assets/Images/Linea-tiempo.png";
+import TimeLine from "../../assets/Images/Linea-tiempo.png"
 
 const incidence = {
   community: "",
@@ -21,42 +22,25 @@ const incidence = {
 };
 
 const IncidenceInfo = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const [approved, setApproved] = useState(false);
-
-  const handleApproveClick = () => {
-    navigate("/comunidad/incidencias/info/aprobada");
-
-    setApproved(true);
-  };
-
   return (
     <>
       <Header
         title="Pendientes/Humedad en la escalera"
         community="Av.Reino de Valencia, 87"
       />
-      <IncidenceImage incidence={incidence} />
-      {approved && (
-        <div className="time-line-container">
-          <img src={TimeLine} alt="linea-tiempo" className="time-line" />
-        </div>
-      )}
+      <IncidenceImage incidence={incidence}/>
+      
       <IncidenceDetail incidence={incidence} />
 
-      {!approved && (
-        <div className="div-btn-aprobar">
-          <Button
-            className="btn-aprobar"
-            type="primary"
-            onClick={handleApproveClick}
-          >
-            Aprobar
-          </Button>
-        </div>
-      )}
-
+      <div className="div-btn-aprobar">
+        <Button className="btn-aprobar" type="primary">
+          Aprobar
+        </Button>
+      </div>
+      {/* <IncidenceProgress /> */}
+      <div className="time-line-container">
+    <img src={TimeLine} alt="linea-tiempo" className="time-line" />
+	</div> 
       <Footer />
     </>
   );
