@@ -9,6 +9,7 @@ import Footer from "../../components/Footer/Footer";
 import { useDispatch, useSelector } from "react-redux";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useLocation } from "react-router-dom";
+import { Flex } from "antd";
 
 const CommunityAccount = () => {
 	const dispatch = useDispatch();
@@ -185,17 +186,23 @@ const CommunityAccount = () => {
 	return (
 		<>
 			<Header title="Comunidades" community="Calle Doctor Moliner, 27" />
-			{selectedOption === "Social" ? (
-				<ProfileImage width={300} height={300} />
-			) : (
-				<PieChart
-					data={selectedData}
-					type={type}
-					selectedOption={selectedOption}
-				/>
-			)}
-			<SegmentedSlider options={options} onChange={handleOptionChange} />
-			<Cards cardData={cardData} />
+			<div className="container-pie-chart">
+
+				{selectedOption === "Social" ? (
+					<ProfileImage width={300} height={300} />
+				) : (
+					<PieChart
+						data={selectedData}
+						type={type}
+						selectedOption={selectedOption}
+					/>
+				)}
+			</div>
+
+			<Flex vertical="true" align="strecht" style={{ paddingLeft: 28, paddingRight: 28 }}>
+				<SegmentedSlider options={options} onChange={handleOptionChange} />
+				<Cards cardData={cardData} />
+			</Flex>
 			<Footer />
 		</>
 	);

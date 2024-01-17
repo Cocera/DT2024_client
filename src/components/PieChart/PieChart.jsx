@@ -1,3 +1,4 @@
+import "./PieChart.scss";
 import { PieChart, Pie, Tooltip, Cell, LabelList, Label } from "recharts";
 
 const DonutChart = ({ data, type, selectedOption }) => {
@@ -41,11 +42,7 @@ const DonutChart = ({ data, type, selectedOption }) => {
 	return (
 		<>
 			<div
-				style={{
-					textAlign: "center",
-					display: "flex",
-					justifyContent: "center",
-				}}>
+			className="container-pie-chart">
 				<PieChart width={700} height={700}>
 					<Tooltip />
 					<Pie
