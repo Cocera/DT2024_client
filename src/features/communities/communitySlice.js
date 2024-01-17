@@ -56,7 +56,7 @@ export const communitySlice = createSlice({
 	extraReducers: (builder) => {
 		builder
 			.addCase(getAll.fulfilled, (state, action) => {
-				state.communities = [...state.communities, ...action.payload];
+				state.communities = action.payload;
 				state.isSuccess = true;
 			})
 			.addCase(getAll.rejected, (state, action) => {

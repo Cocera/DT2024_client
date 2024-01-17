@@ -11,6 +11,13 @@ import { useAuth0 } from "@auth0/auth0-react";
 const Search = () => {
 	const dispatch = useDispatch();
 	const { getAccessTokenSilently } = useAuth0();
+	const location = useLocation();
+	const { communities } = useSelector((state) => state.communities);
+	const incidences = useSelector((state) => state.incidences);
+	const [searchType, setSearchType] = useState(
+		location.pathname === "/comunidad/busqueda" ? "communities" : "incidences"
+	);
+
 	useEffect(() => {
 		const getUserMetadata = async () => {
 			const domain = "http://localhost:8080";
@@ -30,45 +37,28 @@ const Search = () => {
 		getUserMetadata();
 	}, [getAccessTokenSilently, dispatch]);
 
-	const location = useLocation();
-	const { communities } = useSelector((state) => state.communities);
-	const [searchType, setSearchType] = useState("community");
-
 	const handleSearchTypeChange = (type) => {
 		setSearchType(type);
 	};
 
-	const incidences = useSelector((state) => state.incidences);
-
-	if (location.pathname === "/comunidad/busqueda") {
-		return (
-			<>
-				<Header title="Comunidades" />
-				<SearchBar
-					onSearchTypeChange={handleSearchTypeChange}
-					searchType="communities"
-				/>
-				{searchType === "communities" && (
-					<CardImage communities={communities} />
-				)}
-				<Footer />
-			</>
-		);
-	}
-
-	if (location.pathname === "/incidencia/busqueda") {
-		return (
-			<>
-				<Header title="Incidencias" />
-				<SearchBar
-					onSearchTypeChange={handleSearchTypeChange}
-					searchType="incidences"
-				/>
-				{searchType === "incidences" && <CardImage incidences={incidences} />}
-				<Footer />
-			</>
-		);
-	}
+	return (
+		<>
+			<Header
+				title={searchType === "communities" ? "Comunidades" : "Incidencias"}
+			/>
+			<SearchBar
+				onSearchTypeChange={handleSearchTypeChange}
+				searchType={searchType}
+			/>
+			{searchType === "communities" && (
+				<CardImage items={communities} searchType="communities" />
+			)}
+			{searchType === "incidences" && (
+				<CardImage items={incidences} searchType="incidences" />
+			)}
+			<Footer />
+		</>
+	);
 };
 
 export default Search;
