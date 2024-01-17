@@ -1,8 +1,5 @@
 import { NavLink } from "react-router-dom";
-import HomeIcon from "../../assets/HomeIcon/HomeIcon";
-import WarningIcon from "../../assets/WarningIcon/WarningIcon";
-import StoreFrontIcon from "../../assets/StoreFrontIcon/StoreFrontIcon";
-import ProfileIcon from "../../assets/ProfileIcon/ProfileIcon";
+import NavBarIcons from "./NavBarIcons/NavBarIcons";
 import "./NavBarGeneral.scss";
 import { useState } from "react";
 
@@ -24,10 +21,10 @@ const NavBarGeneral = () => {
           >
             <NavLink to={route}>
               <span className="icon">
-                {index === 0 && <HomeIcon icon="home" isActive={activeIndex === 0} />}
-                {index === 1 && <HomeIcon icon="warning" isActive={activeIndex === 1} />}
-                {index === 2 && <HomeIcon icon="storefront" isActive={activeIndex === 2} />}
-                {index === 3 && <HomeIcon icon="person" isActive={activeIndex === 3} />}
+                {index === 0 && <NavBarIcons icon="home" isActive={activeIndex === 0} />}
+                {index === 1 && <NavBarIcons icon="warning" isActive={activeIndex === 1} />}
+                {index === 2 && <NavBarIcons icon="storefront" isActive={activeIndex === 2} />}
+                {index === 3 && <NavBarIcons icon="person" isActive={activeIndex === 3} />}
               </span>
             </NavLink>
           </li>
