@@ -1,7 +1,6 @@
 import "./Home.scss";
 import backgroundImg from "../../assets/Images/Home_image.png";
 import ButtonHome from "./ButtonHome/ButtonHome";
-
 import LogoApp from "../../assets/Logo_TuAppMin2.png";
 import IconCommunityHome from "../../assets/HomeIcons/comunidad_icon.png";
 import IconDocumentsHome from "../../assets/HomeIcons/documents_icon.png";
@@ -12,13 +11,8 @@ import IconTranscriptionHome from "../../assets/HomeIcons/transcription_icon.png
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Homepage = () => {
-	const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
+	const { user, isAuthenticated } = useAuth0();
 
-	const accessToken = async () => {
-		const token = await getAccessTokenSilently();
-		console.log(user, token);
-	};
-	accessToken();
 	return (
 		isAuthenticated && (
 			<>
