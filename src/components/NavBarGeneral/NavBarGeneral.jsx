@@ -4,7 +4,7 @@ import "./NavBarGeneral.scss";
 import { useState } from "react";
 
 const NavBarGeneral = () => {
-	const [activeIndex, setActiveIndex] = useState(0);
+	const [activeIndex, setActiveIndex] = useState(2);
 
 	const handleItemClick = (index) => {
 		setActiveIndex(index);
