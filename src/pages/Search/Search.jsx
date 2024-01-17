@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { getAll } from "../../features/communities/communitySlice";
 import { useAuth0 } from "@auth0/auth0-react";
+import { Flex } from "antd";
 
 const Search = () => {
 	const dispatch = useDispatch();
@@ -46,16 +47,20 @@ const Search = () => {
 			<Header
 				title={searchType === "communities" ? "Comunidades" : "Incidencias"}
 			/>
-			<SearchBar
-				onSearchTypeChange={handleSearchTypeChange}
-				searchType={searchType}
-			/>
-			{searchType === "communities" && (
-				<CardImage items={communities} searchType="communities" />
-			)}
-			{searchType === "incidences" && (
-				<CardImage items={incidences} searchType="incidences" />
-			)}
+			<Flex justify="" align="" vertical="" wrap="" style={{ padding: 18}}>
+
+				<SearchBar
+					onSearchTypeChange={handleSearchTypeChange}
+					searchType={searchType}
+				/>
+
+				{searchType === "communities" && (
+					<CardImage items={communities} searchType="communities" />
+				)}
+				{searchType === "incidences" && (
+					<CardImage items={incidences} searchType="incidences" />
+				)}
+			</Flex>
 			<Footer />
 		</>
 	);
