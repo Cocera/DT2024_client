@@ -31,7 +31,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 				clientId="OTqs67fdnQhgjhJHCNjDXsz15ngesR4D"
 				authorizationParams={{
 					audience: "http://localhost:8080",
-					redirect_uri: window.location.origin + "/profile",
+					redirect_uri: window.location.origin,
 				}}>
 				<App />
 			</Auth0Provider>
