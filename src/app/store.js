@@ -1,8 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import auth from "../features/auth/authSlice";
+import communities from "../features/communities/communitySlice";
 
 export const store = configureStore({
 	reducer: {
-		auth,
+		communities,
+		// incidences,
 	},
 });
