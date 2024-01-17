@@ -24,7 +24,7 @@ const Homepage = () => {
           <ButtonHome icon={IconSuppliersHome} title="Proveedores" route="" />
           <ButtonHome icon={IconTranscriptionHome} title="Transcripción" route="" />
           <ButtonHome icon={IconDocumentsHome} title="Documentos" route="" />
-          <ButtonHome icon={IconProfileHome} title="Perfil" route="" />
+          <ButtonHome icon={IconProfileHome} title="Perfil" route="/signin" />
         </div>
         <div className="home-img-container">
           <img src={backgroundImg} alt="" />
