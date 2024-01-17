@@ -1,5 +1,5 @@
-$shadow-color: #AF172D;
-$shadow-opacity: 0.25; // 25% de opacidad
+$shadow-color: #000000;
+$shadow-opacity: 0.15;
 
 @mixin box-shadow($x, $y, $blur, $spread, $color, $opacity) {
   box-shadow: $x $y $blur $spread rgba($color, $opacity);

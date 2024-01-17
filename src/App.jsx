@@ -43,9 +43,6 @@ function App() {
 					<Route
 						path="/simulador/prevision"
 						element={<Simulator />}></Route>
-					<Route
-						path="/simulador/fondos"
-						element={<Simulator />}></Route>
 					{/* <Route path="*" element={<NotFound />}></Route> */}
 				</Routes>
 			</Router>
