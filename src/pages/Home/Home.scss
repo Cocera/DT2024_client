@@ -25,6 +25,10 @@ main.home-main {
         align-items: center;
         background-color: white;
         z-index: 2;
+        
+        a {
+            text-decoration: none;
+        }
     }
 
     .home-img-container {
