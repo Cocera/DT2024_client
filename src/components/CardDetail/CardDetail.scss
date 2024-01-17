@@ -1,0 +1,17 @@
+article.container-card-detail {
+    width: 100%;
+    height: 78px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .container-card-flex-txt {
+        display: flex;
+        flex-direction: column;
+
+        h3, p {
+            margin: 0;
+        }
+    }
+}

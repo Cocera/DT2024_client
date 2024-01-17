@@ -68,13 +68,13 @@ const CommunityAccount = () => {
 						id: 1,
 						title: "Historial",
 						description:
-							"Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+							"Historial de cuentas de la comunidad.",
 					},
 					{
 						id: 2,
 						title: "Simulador",
 						description:
-							"Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+							"Simulador de cuentas de la comunidad.",
 					},
 					{
 						id: 3,
@@ -85,7 +85,7 @@ const CommunityAccount = () => {
 						id: 4,
 						title: "Operar",
 						description:
-							"Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+							"Hacer operaciones directamente con el banco",
 					},
 				];
 			case "Incidencias":
@@ -94,24 +94,24 @@ const CommunityAccount = () => {
 						id: 1,
 						title: "Pendientes",
 						description:
-							"Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+							"5 incidencias a resolver",
 					},
 					{
 						id: 2,
 						title: "Activas",
 						description:
-							"Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+							"17 incidencias en curso",
 					},
 					{
 						id: 3,
 						title: "Añadir",
-						description: "ES49 4576 9087 7584 9043",
+						description: "Añadir una incidencia",
 					},
 					{
 						id: 4,
 						title: "Historial",
 						description:
-							"Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+							"Historial de incidencias resueltas",
 					},
 				];
 			case "Social":
@@ -120,30 +120,24 @@ const CommunityAccount = () => {
 						id: 1,
 						title: "Miembros",
 						description:
-							"Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+							"Visualizar miembros de la comunidad",
 					},
 					{
 						id: 2,
 						title: "Tablón de Anuncios",
 						description:
-							"Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+							"Acceder a las noticias importantes de la comunidad",
 					},
 					{
 						id: 3,
 						title: "Documentos",
-						description: "ES49 4576 9087 7584 9043",
+						description: "Acceder a la documentación de la comunidad",
 					},
 					{
 						id: 4,
-						title: "Actas",
-						description:
-							"Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
-					},
-					{
-						id: 5,
 						title: "Votaciones",
 						description:
-							"Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+							"Crear una votación o revisar el estado de las votaciones",
 					},
 				];
 			default:
@@ -201,7 +195,9 @@ const CommunityAccount = () => {
 
 			<Flex vertical="true" align="strecht" style={{ paddingLeft: 28, paddingRight: 28 }}>
 				<SegmentedSlider options={options} onChange={handleOptionChange} />
-				<Cards cardData={cardData} />
+				<div className="container-margins">
+					<Cards cardData={cardData} />
+				</div>
 			</Flex>
 			<Footer />
 		</>
