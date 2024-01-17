@@ -7,7 +7,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { getAll } from "../../features/communities/communitySlice";
 import { useAuth0 } from "@auth0/auth0-react";
-import { Flex } from "antd";
+import { Flex, FloatButton } from "antd";
+import { PlusOutlined } from '@ant-design/icons';
 
 const Search = () => {
 	const dispatch = useDispatch();
@@ -46,6 +47,17 @@ const Search = () => {
 		<>
 			<Header
 				title={searchType === "communities" ? "Comunidades" : "Incidencias"}
+			/>
+			<FloatButton
+				shape="circle"
+				type="primary"
+				style={{
+					right: 24,
+					bottom: 100,
+					height: 55,
+					width: 55,
+				}}
+				icon={<PlusOutlined />}
 			/>
 			<Flex justify="" align="center" vertical="true" style={{ paddingLeft: 18, paddingRight: 18 }}>
 

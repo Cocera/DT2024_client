@@ -14,8 +14,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 					borderRadius: 20,
 					borderRadiusSM: 20,
 					borderRadiusXS: 20,
-					colorPrimary: "#AB172F",
-					colorSecondary: "#024B59",
+					colorPrimary: "#024B59",
+					colorSecondary: "#AB172F",
 				},
 				// components: {
 				// 	Segmented: {
