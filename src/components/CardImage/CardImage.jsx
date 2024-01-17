@@ -35,7 +35,7 @@ const CardImage = ({ items, searchType }) => {
                 <ProfileImage width={115} height={115} src={item.image} />
                 <Card style={{ width: 300, height: 128 }}>{renderItem(item)}</Card>
             </div>
-        </Link>
+        </Link> 
     ));
 
     return <>{allItems}</>;
