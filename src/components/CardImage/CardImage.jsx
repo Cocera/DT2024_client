@@ -4,6 +4,7 @@ import ProfileImage from "../../components/ProfileImage/ProfileImage";
 import { Card } from "antd";
 
 const CardImage = ({ items, searchType }) => {
+    console.log(items);
     const renderItem = (item) => {
         if (searchType === "communities") {
             return (
@@ -30,7 +31,7 @@ const CardImage = ({ items, searchType }) => {
 
     const allItems = items.map((item) => (
         <div key={item._id} className="card-image-container">
-            <ProfileImage width={115} height={115} />
+            <ProfileImage width={115} height={115} src={item.image} />
             <Card style={{ width: 300, height: 128 }}>{renderItem(item)}</Card>
         </div>
     ));
