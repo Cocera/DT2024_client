@@ -52,11 +52,6 @@ function App() {
 
 					<Route
 						path="/comunidad/incidencias/pendientes"
-						element={<IncidencesList />}>
-					</Route>
-
-					<Route
-						path="/comunidad/incidencias/info/pendiente"
 						element={<IncidenceInfo />}>
 					</Route>
 
