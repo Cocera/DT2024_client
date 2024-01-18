@@ -4,4 +4,8 @@ section.container-community-account {
     align-items: center;
     justify-content: center;
     width: 430px;
+
+    .ant-segmented {
+        width: 350px;
+    }
 }
