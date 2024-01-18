@@ -1,5 +1,4 @@
 import React from "react";
-// import "./ExpensesList.scss";
 import { Avatar, Divider, Flex, List, Skeleton, theme } from 'antd';
 import ExpensesDetail from "./ExpensesDetail/ExpensesDetail";
 import { useLocation } from 'react-router-dom';

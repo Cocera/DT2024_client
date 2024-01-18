@@ -2,10 +2,10 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { calculatorService } from './calculatorService';
 
 const initialState = {
-    cuotas: [], // Almacenará las cuotas calculadas
-    loading: false, // Indicará si la solicitud está en proceso
-    error: null, // Guardará información de cualquier error que ocurra
-    gastosAdicionales: { elevator: 0, phone: 0 }, // Podría incluir los gastos adicionales si necesitas manejarlo en este slice
+    cuotas: [], 
+    loading: false, 
+    error: null, 
+    gastosAdicionales: { elevator: 0, phone: 0 }, 
 };
 
 export const calcularCuotasAsync = createAsyncThunk(
@@ -20,17 +20,13 @@ export const calcularCuotasAsync = createAsyncThunk(
     }
 );
 
-// const initialState = {
-//     cuotas: [],
-//     loading: false,
-//     error: null,
-// };
+
 
 const calculatorSlice = createSlice({
     name: 'calculator',
     initialState,
     reducers: {
-        // Aquí puedes agregar reducers sincrónicos si los necesitas
+        
     },
     extraReducers: (builder) => {
         builder

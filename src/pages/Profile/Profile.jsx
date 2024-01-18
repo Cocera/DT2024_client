@@ -11,7 +11,7 @@ const Profile = () => {
 	}
 	const accessToken = async () => {
 		const token = await getAccessTokenSilently();
-		console.log(user, token);
+		
 	};
 	accessToken();
 

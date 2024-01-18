@@ -17,14 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 					colorPrimary: "#024B59",
 					colorSecondary: "#AB172F",
 				},
-				// components: {
-				// 	Segmented: {
-				// 		token: {
-				// 			itemActiveBg: '#AB172F',
-				// 			itemSelectedBg: '#024B59',
-				// 		},
-				// 	},
-				// }
+			
 			}}>
 			<Auth0Provider
 				domain="dev-r85is3s0gdynccjy.eu.auth0.com"
