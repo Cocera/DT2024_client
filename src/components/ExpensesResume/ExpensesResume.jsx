@@ -5,7 +5,7 @@ import './ExpensesResume.scss'
 const ExpensesResume = () => {
     return (
         <>
-            <Space className='secondary-color' direction="vertical" size="small" style={{ padding: 20, display: 'flex' }}>
+            <Space className='secondary-color' direction="vertical" size="small" style={{ padding: 20, display: 'flex', marginBottom:28 }}>
                 <Flex justify='space-between' align='center' style={{ width: 250 }}>
                     <Flex justify='space-around' align='center' gap={8}>
                         <div className='color-container-expenses secondary-color-bg'></div>
