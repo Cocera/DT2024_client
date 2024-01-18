@@ -57,15 +57,13 @@ const CommunityAccount = () => {
 						id: 1,
 						section: "Cuenta",
 						title: "Historial",
-						description:
-							"Historial de cuentas de la comunidad.",
+						description: "Historial de cuentas de la comunidad.",
 					},
 					{
 						id: 2,
 						section: "Cuenta",
 						title: "Simulador",
-						description:
-							"Simulador de cuentas de la comunidad.",
+						description: "Simulador de cuentas de la comunidad.",
 					},
 					{
 						id: 3,
@@ -77,8 +75,7 @@ const CommunityAccount = () => {
 						id: 4,
 						section: "Cuenta",
 						title: "Operar",
-						description:
-							"Hacer operaciones directamente con el banco",
+						description: "Hacer operaciones directamente con el banco",
 					},
 				];
 			case "Incidencias":
@@ -87,29 +84,25 @@ const CommunityAccount = () => {
 						id: 1,
 						section: "Incidencias",
 						title: "Pendientes",
-						description:
-							"5 incidencias a resolver",
+						description: "5 incidencias a resolver",
 					},
 					{
 						id: 2,
 						section: "Incidencias",
 						title: "Activas",
-						description:
-							"17 incidencias en curso",
+						description: "17 incidencias en curso",
 					},
 					{
 						id: 3,
 						section: "Incidencias",
 						title: "Añadir",
 						description: "Añadir una incidencia",
-						description: "Añadir una incidencia",
 					},
 					{
 						id: 4,
 						section: "Incidencias",
 						title: "Historial",
-						description:
-							"Historial de incidencias resueltas",
+						description: "Historial de incidencias resueltas",
 					},
 				];
 			case "Social":
@@ -118,21 +111,18 @@ const CommunityAccount = () => {
 						id: 1,
 						section: "Social",
 						title: "Miembros",
-						description:
-							"Visualizar miembros de la comunidad",
+						description: "Visualizar miembros de la comunidad",
 					},
 					{
 						id: 2,
 						section: "Social",
 						title: "Tablón de Anuncios",
-						description:
-							"Acceder a las noticias importantes de la comunidad",
+						description: "Acceder a las noticias importantes de la comunidad",
 					},
 					{
 						id: 3,
 						section: "Social",
 						title: "Documentos",
-						description: "Acceder a la documentación de la comunidad",
 						description: "Acceder a la documentación de la comunidad",
 					},
 					{
@@ -140,7 +130,6 @@ const CommunityAccount = () => {
 						section: "Social",
 						title: "Votaciones",
 						description:
-							"Crear una votación o revisar el estado de las votaciones",
 							"Crear una votación o revisar el estado de las votaciones",
 					},
 				];
