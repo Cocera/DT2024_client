@@ -12,7 +12,7 @@ const ExpensesDetail = (params) => {
 
     if (location.pathname === '/comunidad/cuenta/historial') {
         return (
-            <article>
+            <article className="container-expenses">
                 <div className="category-cuentas">
                     <DollarOutlined />
                     <Paragraph style={{ margin: 0 }}>{params.category}</Paragraph>
@@ -24,7 +24,7 @@ const ExpensesDetail = (params) => {
         )
     } else if (location.pathname === '/comunidad/cuenta/ingresos') {
         return (
-            <article>
+            <article className="container-expenses">
                 <div className="category-cuentas">
                     <DollarOutlined />
                     <Paragraph style={{ margin: 0 }}>{params.category}</Paragraph>
