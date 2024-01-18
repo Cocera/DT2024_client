@@ -1,7 +1,7 @@
 import "./PieChart.scss";
 import { PieChart, Pie, Tooltip, Cell, LabelList, Label } from "recharts";
 
-const DonutChart = ({ data, type, selectedOption }) => {
+const DonutChart = ({ data, selectedOption }) => {
 	const totalValue = data.reduce((acc, entry) => acc + entry.value, 0);
 
 	const colors = [
@@ -41,10 +41,9 @@ const DonutChart = ({ data, type, selectedOption }) => {
 
 	return (
 		<>
-			<div
-			className="container-pie-chart">
+			<div className="container-pie-chart">
 				<PieChart width={700} height={700}>
-					<Tooltip />
+					<Tooltip offset={10} />
 					<Pie
 						data={data}
 						dataKey="value"
@@ -52,7 +51,7 @@ const DonutChart = ({ data, type, selectedOption }) => {
 						innerRadius={150}
 						fill="#024B59"
 						labelLine={false}
-						label={name}>
+						label={({ name }) => name}>
 						<LabelList
 							dy={-3}
 							fill="white"
@@ -61,13 +60,13 @@ const DonutChart = ({ data, type, selectedOption }) => {
 							stroke="none"
 							content={renderCustomizedLabel}
 						/>
-						{type === "incidences" ? (
+						{selectedOption === "Incidencias" ? (
 							<Label
-								value={`Total ${selectedOption}: ${totalValue}`}
+								value={`${selectedOption} Totales: ${totalValue}`}
 								position="center"
 							/>
 						) : (
-							<Label value={`Total Gastos: €${totalValue}`} position="center" />
+							<Label value={`Total: ${totalValue}€`} position="center" />
 						)}
 						{data.map((entry, index) => (
 							<Cell

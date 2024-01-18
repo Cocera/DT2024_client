@@ -7,7 +7,7 @@ const CardDetail = ({ cardData }) => {
 	}
 	const data = cardData.map((data) => {
 		return (
-			<a href={"/community/account/" + data.title} key={data.id}>
+			<a href={"/simulador/prevision"} key={data.id}>
 				<Card bordered={false}>
 					<Row gutter={[16, 16]} align="middle">
 						<Col span={20}>

@@ -1,4 +1,3 @@
-import React from "react";
 import "./CardImage.scss";
 import ProfileImage from "../../components/ProfileImage/ProfileImage";
 import { Card } from "antd";
@@ -19,10 +18,10 @@ const CardImage = ({ items, searchType }) => {
 		} else if (searchType === "incidences") {
 			return (
 				<>
-					<h4>{item.title}</h4>
-					<h5>{item.community}</h5>
-					<p>{item.description}</p>
-					<h6>{item.provider}</h6>
+					<h3 className="secondary-color">{item.title}</h3>
+					<h4 className="secondary-color">{item.community}</h4>
+					<p className="grey-color">{item.description}</p>
+					<h5 className="secondary-color">{item.provider}</h5>
 				</>
 			);
 		}
@@ -34,7 +33,7 @@ const CardImage = ({ items, searchType }) => {
 			key={item._id}
 			state={{ _id: item._id }}
 			to={`/comunidad/cuenta/${item._id}`}>
-			<div className="card-image-container">
+			<div key={item._id} className="card-image-container">
 				<ProfileImage width={115} height={115} src={item.image} />
 				<Card style={{ width: 300, height: 128 }}>{renderItem(item)}</Card>
 			</div>

@@ -11,16 +11,13 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { useLocation } from "react-router-dom";
 import { Flex } from "antd";
 import getUserMetadata from "../../features/auth/authService";
-import { getById } from "../../features/communities/communitySlice";
+import { getCommunityById } from "../../features/communities/communitySlice";
 
 const CommunityAccount = () => {
 	const dispatch = useDispatch();
 	const { getAccessTokenSilently } = useAuth0();
 
 	const location = useLocation();
-	const type = location.pathname.includes("/comunidad/cuentas")
-		? "communities"
-		: "incidences";
 
 	const { community } = useSelector((state) => state.communities);
 	const [communityData, setCommunityData] = useState([]);
@@ -37,13 +34,13 @@ const CommunityAccount = () => {
 
 	useEffect(() => {
 		getUserMetadata(getAccessTokenSilently);
-		dispatch(getById(location.state._id));
+		dispatch(getCommunityById(location.state._id));
 	}, [getAccessTokenSilently, dispatch, location]);
 
 	const incidenceData = [
-		{ name: "Icon1", value: 8 },
-		{ name: "Icon2", value: 5 },
-		{ name: "Icon3", value: 1 },
+		{ name: "Resueltas", value: 78 },
+		{ name: "Pendientes", value: 5 },
+		{ name: "Activas", value: 17 },
 	];
 
 	const [selectedOption, setSelectedOption] = useState("Cuentas");
@@ -59,14 +56,12 @@ const CommunityAccount = () => {
 					{
 						id: 1,
 						title: "Historial",
-						description:
-							"Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+						description: "Historial de cuentas de la comunidad.",
 					},
 					{
 						id: 2,
 						title: "Simulador",
-						description:
-							"Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+						description: "Simulador de cuentas de la comunidad.",
 					},
 					{
 						id: 3,
@@ -76,8 +71,7 @@ const CommunityAccount = () => {
 					{
 						id: 4,
 						title: "Operar",
-						description:
-							"Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+						description: "Hacer operaciones directamente con el banco",
 					},
 				];
 			case "Incidencias":
@@ -85,25 +79,22 @@ const CommunityAccount = () => {
 					{
 						id: 1,
 						title: "Pendientes",
-						description:
-							"Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+						description: `5 incidencias a resolver`,
 					},
 					{
 						id: 2,
 						title: "Activas",
-						description:
-							"Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+						description: `17 incidencias en curso`,
 					},
 					{
 						id: 3,
 						title: "Añadir",
-						description: "ES49 4576 9087 7584 9043",
+						description: "Añadir una incidencia",
 					},
 					{
 						id: 4,
 						title: "Historial",
-						description:
-							"Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+						description: "Historial de incidencias resueltas",
 					},
 				];
 			case "Social":
@@ -111,31 +102,23 @@ const CommunityAccount = () => {
 					{
 						id: 1,
 						title: "Miembros",
-						description:
-							"Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+						description: "Visualizar miembros de la comunidad",
 					},
 					{
 						id: 2,
 						title: "Tablón de Anuncios",
-						description:
-							"Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+						description: "Acceder a las noticias importantes de la comunidad",
 					},
 					{
 						id: 3,
 						title: "Documentos",
-						description: "ES49 4576 9087 7584 9043",
+						description: "Acceder a la documentación de la comunidad",
 					},
 					{
 						id: 4,
-						title: "Actas",
-						description:
-							"Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
-					},
-					{
-						id: 5,
 						title: "Votaciones",
 						description:
-							"Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+							"Crear una votación o revisar el estado de las votaciones",
 					},
 				];
 			default:
@@ -182,11 +165,7 @@ const CommunityAccount = () => {
 				{selectedOption === "Social" ? (
 					<ProfileImage width={300} height={300} />
 				) : (
-					<PieChart
-						data={selectedData}
-						type={type}
-						selectedOption={selectedOption}
-					/>
+					<PieChart data={selectedData} selectedOption={selectedOption} />
 				)}
 			</div>
 

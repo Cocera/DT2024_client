@@ -3,13 +3,15 @@ import { AutoComplete } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 import {
-	getAll,
-	getByAddress,
+	getAllCommunities,
+	getCommunityByAddress,
 } from "../../features/communities/communitySlice";
+import { getIncidenceByKeyword } from "../../features/incidences/incidenceSlice";
 
 const SearchBar = ({ onSearchTypeChange, searchType }) => {
 	const dispatch = useDispatch();
 	const { communities } = useSelector((state) => state.communities);
+	const { incidences } = useSelector((state) => state.incidences);
 	const [options, setOptions] = useState([]);
 
 	const setAddressOptions = (communities) => {
@@ -25,17 +27,16 @@ const SearchBar = ({ onSearchTypeChange, searchType }) => {
 			onSearchTypeChange(searchType, text);
 		}
 		if (text == "") {
-			dispatch(getAll());
+			dispatch(getAllCommunities());
 			setAddressOptions(communities);
 			return;
 		}
 		if (searchType === "communities") {
-			dispatch(getByAddress(text));
+			dispatch(getCommunityByAddress(text));
 			setAddressOptions(communities);
+		} else if (searchType === "incidences") {
+			dispatch(getIncidenceByKeyword(text));
 		}
-		// else if (searchType === "incidences") {
-		// 	dispatch(getIncidenceByName(keywords));
-		// }
 	};
 
 	return (
