@@ -1,46 +1,45 @@
 article.owner-card {
-    border: 0;
-    background-color: white;
-    border-radius: 16px;
-    min-width: 176px;
-    min-height: auto;
-    padding: 8px;
+  border: 0;
+  background-color: white;
+  border-radius: 16px;
+  min-width: 176px;
+  min-height: auto;
+  padding: 8px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  div.info-container {
+    display: flex;
+
+    margin-left: 41px;
+
+    p,
+    h2 {
+      margin: 0;
+      padding: 0;
+    }
+
+    .info-cuota {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .owner-id {
+    width: 45px;
+    height: 45px;
+    border-radius: 25px;
 
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
 
-    div.info-container {
-        display: flex;
-        // align-items: center;
-        // justify-content: center;
-
-        margin-left: 41px;
-
-        p, h2 {
-            margin: 0;
-            padding: 0;
-        }
-
-        .info-cuota {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+    h2 {
+      color: white;
+      text-align: center;
     }
-
-    .owner-id {
-        width: 45px;
-        height: 45px;
-        border-radius: 25px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        h2 {
-            color: white;
-            text-align: center;
-        }
-    }
+  }
 }
