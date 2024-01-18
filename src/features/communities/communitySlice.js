@@ -8,7 +8,7 @@ const initialState = {
 	isSuccess: false,
 };
 
-export const getAll = createAsyncThunk(
+export const getAllCommunities = createAsyncThunk(
 	"communities/getCommunities",
 	async () => {
 		try {
@@ -20,7 +20,7 @@ export const getAll = createAsyncThunk(
 	}
 );
 
-export const getById = createAsyncThunk(
+export const getCommunityById = createAsyncThunk(
 	"communities/getCommunityById",
 	async (_id) => {
 		try {
@@ -31,7 +31,7 @@ export const getById = createAsyncThunk(
 	}
 );
 
-export const getByAddress = createAsyncThunk(
+export const getCommunityByAddress = createAsyncThunk(
 	"communities/getCommunityByAddress",
 	async (address) => {
 		try {
@@ -55,25 +55,25 @@ export const communitySlice = createSlice({
 	},
 	extraReducers: (builder) => {
 		builder
-			.addCase(getAll.fulfilled, (state, action) => {
+			.addCase(getAllCommunities.fulfilled, (state, action) => {
 				state.communities = action.payload;
 				state.isSuccess = true;
 			})
-			.addCase(getAll.rejected, (state, action) => {
+			.addCase(getAllCommunities.rejected, (state, action) => {
 				state.isError = true;
 			})
-			.addCase(getById.fulfilled, (state, action) => {
+			.addCase(getCommunityById.fulfilled, (state, action) => {
 				state.community = action.payload;
 				state.isSuccess = true;
 			})
-			.addCase(getById.rejected, (state, action) => {
+			.addCase(getCommunityById.rejected, (state, action) => {
 				state.isError = true;
 			})
-			.addCase(getByAddress.fulfilled, (state, action) => {
+			.addCase(getCommunityByAddress.fulfilled, (state, action) => {
 				state.communities = action.payload;
 				state.isSuccess = true;
 			})
-			.addCase(getByAddress.rejected, (state, action) => {
+			.addCase(getCommunityByAddress.rejected, (state, action) => {
 				state.isError = true;
 			});
 	},

@@ -5,25 +5,27 @@ import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { getAll } from "../../features/communities/communitySlice";
+import { getAllCommunities } from "../../features/communities/communitySlice";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Flex, FloatButton } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 import getUserMetadata from "../../features/auth/authService";
+import { getAllIncidences } from "../../features/incidences/incidenceSlice";
 
 const Search = () => {
 	const dispatch = useDispatch();
 	const { getAccessTokenSilently } = useAuth0();
 	const location = useLocation();
 	const { communities } = useSelector((state) => state.communities);
-	// const { incidences } = useSelector((state) => state.incidences);
+	const { incidences } = useSelector((state) => state.incidences);
 	const [searchType, setSearchType] = useState(
 		location.pathname === "/comunidad/busqueda" ? "communities" : "incidences"
 	);
 
 	useEffect(() => {
 		getUserMetadata(getAccessTokenSilently);
-		dispatch(getAll());
+		dispatch(getAllCommunities());
+		dispatch(getAllIncidences());
 	}, [getAccessTokenSilently, dispatch]);
 
 	const handleSearchTypeChange = (type) => {

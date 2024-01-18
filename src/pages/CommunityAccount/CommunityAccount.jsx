@@ -11,16 +11,13 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { useLocation } from "react-router-dom";
 import { Flex } from "antd";
 import getUserMetadata from "../../features/auth/authService";
-import { getById } from "../../features/communities/communitySlice";
+import { getCommunityById } from "../../features/communities/communitySlice";
 
 const CommunityAccount = () => {
 	const dispatch = useDispatch();
 	const { getAccessTokenSilently } = useAuth0();
 
 	const location = useLocation();
-	const type = location.pathname.includes("/comunidad/cuentas")
-		? "communities"
-		: "incidences";
 
 	const { community } = useSelector((state) => state.communities);
 	const [communityData, setCommunityData] = useState([]);
@@ -37,13 +34,13 @@ const CommunityAccount = () => {
 
 	useEffect(() => {
 		getUserMetadata(getAccessTokenSilently);
-		dispatch(getById(location.state._id));
+		dispatch(getCommunityById(location.state._id));
 	}, [getAccessTokenSilently, dispatch, location]);
 
 	const incidenceData = [
-		{ name: "Icon1", value: 8 },
-		{ name: "Icon2", value: 5 },
-		{ name: "Icon3", value: 1 },
+		{ name: "Resueltas", value: 78 },
+		{ name: "Pendientes", value: 5 },
+		{ name: "Activas", value: 17 },
 	];
 
 	const [selectedOption, setSelectedOption] = useState("Cuentas");
@@ -105,6 +102,7 @@ const CommunityAccount = () => {
 						section: "Incidencias",
 						title: "Añadir",
 						description: "Añadir una incidencia",
+						description: "Añadir una incidencia",
 					},
 					{
 						id: 4,
@@ -135,12 +133,14 @@ const CommunityAccount = () => {
 						section: "Social",
 						title: "Documentos",
 						description: "Acceder a la documentación de la comunidad",
+						description: "Acceder a la documentación de la comunidad",
 					},
 					{
 						id: 4,
 						section: "Social",
 						title: "Votaciones",
 						description:
+							"Crear una votación o revisar el estado de las votaciones",
 							"Crear una votación o revisar el estado de las votaciones",
 					},
 				];
@@ -188,11 +188,7 @@ const CommunityAccount = () => {
 				{selectedOption === "Social" ? (
 					<ProfileImage width={300} height={300} />
 				) : (
-					<PieChart
-						data={selectedData}
-						type={type}
-						selectedOption={selectedOption}
-					/>
+					<PieChart data={selectedData} selectedOption={selectedOption} />
 				)}
 			</div>
 			<section className="container-card-data-community">
