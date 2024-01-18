@@ -79,17 +79,6 @@ To get started with the project, follow the instructions below.
    This will run the app in the development mode. Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
 Make sure you have [Node.js](https://nodejs.org/) installed on your machine before running these commands.
 
-## Acknowledgments
-Thanks to Colegio de Administradores de Fincas de VLC-CAS for the opportunity.
-Appreciation to The Bridge for the Full Stack Development Bootcamp.
-
-### Team
-
-- **Álvaro Cócera:** https://github.com/Cocera
-- **Frances Morales Velilla:** https://github.com/frances0688
-- **Luciana Boasso:** https://github.com/Luboasso
-
-
 ### Contributing
 Contributions are welcomed and appreciated! Your input helps us create a better community and enhance the Tu AppMinistrador project.
 
@@ -123,6 +112,14 @@ Go to the original repository and click on "New Pull Request". Describe your cha
 If you have a suggestion that would make this better, please fork the repo and create a pull request. Please tag it as "enhancement". Don't forget to give the project a star if you found it helpful! Your support means a lot.
 
 Thank you for contributing to Tu AppMinistrador!
+## Acknowledgments
+Thanks to Colegio de Administradores de Fincas de VLC-CAS for the opportunity.
+Appreciation to The Bridge for the Full Stack Development Bootcamp.
 
+### Team
+
+- **Álvaro Cócera:** https://github.com/Cocera
+- **Frances Morales Velilla:** https://github.com/frances0688
+- **Luciana Boasso:** https://github.com/Luboasso
 ---
 © [2024] [The Bridge Talent Accelerator | Full-Stack Development Bootcamp 2023-2024]
