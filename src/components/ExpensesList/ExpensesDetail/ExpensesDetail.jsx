@@ -18,7 +18,7 @@ const ExpensesDetail = (params) => {
                     <Paragraph style={{ margin: 0 }}>{params.category}</Paragraph>
                 </div>
                 <div className="category-gasto">
-                    <Paragraph style={{ margin: 0 }}>+ {params.amount}€</Paragraph>
+                    <Paragraph style={{ margin: 0 }}>- {params.amount}€</Paragraph>
                 </div>
             </article>
         )
@@ -30,7 +30,7 @@ const ExpensesDetail = (params) => {
                     <Paragraph style={{ margin: 0 }}>{params.category}</Paragraph>
                 </div>
                 <div className="category-gasto">
-                    <Paragraph style={{ margin: 0 }}>- {params.amount}€</Paragraph>
+                    <Paragraph style={{ margin: 0 }}>+ {params.amount}€</Paragraph>
                 </div>
             </article>
         )
