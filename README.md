@@ -22,11 +22,12 @@ This web application is the culmination of a collaborative effort between the fu
 
 1. **Authentication:** Implemented Auth0 for secure user authentication.
 2. **CRUD Operations:** Enabled Create, Read, Update, and Delete operations for both incidences and communities.
-3. **Mobile-First and SPA:** Developed as a mobile-first and single-page application (SPA) to ensure smooth user interaction without page reloads.
-4. **React and Redux:** Utilized React for the frontend and implemented state management with Redux.
-5. **Ant Design:** Integrated Ant Design components to enhance the UI and user experience.
-6. **MVC Architecture:** Followed the Model-View-Controller architecture for a structured and scalable codebase.
-7. **React Router:** Implemented React Router for seamless navigation within the SPA.
+3. **HTTP Requests**: Incorporates Axios for efficient and promise-based HTTP requests to connect the frontend and backend.
+4. **Mobile-First and SPA:** Developed as a mobile-first and single-page application (SPA) to ensure smooth user interaction without page reloads.
+5. **React and Redux:** Utilized React for the frontend and implemented state management with Redux.
+6. **Ant Design:** Integrated Ant Design components to enhance the UI and user experience.
+7. **MVC Architecture:** Followed the Model-View-Controller architecture for a structured and scalable codebase.
+8. **React Router:** Implemented React Router for seamless navigation within the SPA.
 
 ## Technologies Used
 
