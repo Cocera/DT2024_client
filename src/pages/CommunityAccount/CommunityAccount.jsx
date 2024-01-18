@@ -183,7 +183,7 @@ const CommunityAccount = () => {
 			<section className="container-card-data-community">
 				<SegmentedSlider options={options} onChange={handleOptionChange} />
 				<div className="container-margins">
-					<Cards cardData={cardData} />
+					<CardDetail cardData={cardData} />
 				</div>
 			</section>
 			<Footer />

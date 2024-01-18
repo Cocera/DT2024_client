@@ -1,6 +1,5 @@
 import "./CardDetail.scss";
 import { RightOutlined } from "@ant-design/icons";
-import { Card, Col, Row } from "antd";
 import { Link } from "react-router-dom";
 
 const CardDetail = ({ cardData }) => {
@@ -10,6 +9,7 @@ const CardDetail = ({ cardData }) => {
 	const data = cardData.map((data) => {
 		return (
 			<Link
+				key={data.id}
 				to={
 					"/comunidad/" +
 					`${data.section.toLowerCase()}/${data.title.toLowerCase()}`
