@@ -1,7 +1,6 @@
 # Tu AppMinistrador
-<p align="center">
-<img src="../DT2024_client/src/assets/HeaderAppMinistrador.png" alt="Project Preview">
-</p>
+
+![HeaderAppMinistrador-min](https://github.com/Cocera/Tu_AppMinistrador_client/assets/69759992/3776b082-adad-4393-be2c-7e87cfe6b4b7)
 
 ## Overview
 
