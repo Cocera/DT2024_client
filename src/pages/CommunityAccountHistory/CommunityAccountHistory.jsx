@@ -12,13 +12,14 @@ const CommunityAccountHistory = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const handleOptionClick = (value) => {
-    if (value === "gastos") {
-      navigate("/comunidad/cuenta/gastos");
-    } else if (value === "ingresos") {
-      navigate("/comunidad/cuenta/ingresos");
-    }
-  };
+
+	const handleOptionClick = (value) => {
+		if (value === "gastos") {
+			navigate('/comunidad/cuenta/historial');
+		} else if (value === "ingresos") {
+			navigate('/comunidad/cuenta/ingresos');
+		}
+	};
 
   const options = [
     {
@@ -45,29 +46,33 @@ const CommunityAccountHistory = () => {
     },
   ];
 
-  if (location.pathname === "/comunidad/cuenta/historial") {
-    return (
-      <>
-        <Header title="Historial" community="Calle Doctor Moliner, 27" />
-        <ColumnsChartCustom />
-        <ExpensesResume />
-        <SegmentedSlider options={options} onChange={handleOptionClick} />
-        <ExpensesList />
-        <Footer />
-      </>
-    );
-  } else if (location.pathname === "/comunidad/cuenta/ingresos") {
-    return (
-      <>
-        <Header title="Historial" community="Calle Doctor Moliner, 27" />
-        <ColumnsChartCustom />
-        <ExpensesResume />
-        <SegmentedSlider options={options} onChange={handleOptionClick} />
-        <ExpensesList />
-        <Footer />
-      </>
-    );
-  }
+	if (location.pathname === '/comunidad/cuenta/historial') {
+		return (
+			<>
+				<Header title="Historial" community="Calle Doctor Moliner, 27" />
+				<section className="container-community-account">
+					<ColumnsChartCustom />
+					<ExpensesResume />
+					<SegmentedSlider options={options} onChange={handleOptionClick} />
+					<ExpensesList />
+				</section>
+				<Footer />
+			</>
+		)
+	} else if (location.pathname === '/comunidad/cuenta/ingresos') {
+		return (
+			<>
+				<Header title="Historial" community="Calle Doctor Moliner, 27" />
+				<section className="container-community-account">
+					<ColumnsChartCustom />
+					<ExpensesResume />
+					<SegmentedSlider options={options} onChange={handleOptionClick} />
+					<ExpensesList />
+				</section>
+				<Footer />
+			</>
+		)
+	}
 };
 
 export default CommunityAccountHistory;

@@ -1,0 +1,31 @@
+article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 15px;
+    margin: 10px 0;
+
+
+    .anticon-dollar {
+        font-size: 15px;
+        color: #333;
+        vertical-align: middle;
+        margin-right: 8px;
+    }
+
+    .category-cuentas,
+    .category-gasto {
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    .category-cuentas p,
+    .category-gasto p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+    }
+}

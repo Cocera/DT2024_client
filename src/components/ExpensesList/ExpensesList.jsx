@@ -29,6 +29,7 @@ const ExpensesList = () => {
         <List
             itemLayout="horizontal"
             dataSource={data}
+            style={{width:370, marginTop:28}}
             renderItem={(item, index) => (
                 <List.Item >
                     <List.Item.Meta
