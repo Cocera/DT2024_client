@@ -9,7 +9,6 @@ import CardDetail from "../../components/CardDetail/CardDetail";
 import { useDispatch, useSelector } from "react-redux";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useLocation } from "react-router-dom";
-import { Flex } from "antd";
 import getUserMetadata from "../../features/auth/authService";
 import { getCommunityById } from "../../features/communities/communitySlice";
 
@@ -175,7 +174,7 @@ const CommunityAccount = () => {
 			<Header title="Comunidades" community="Calle Doctor Moliner, 27" />
 			<div className="container-pie-chart">
 				{selectedOption === "Social" ? (
-					<ProfileImage width={300} height={300} />
+					<ProfileImage width={300} height={300} src={community.image} />
 				) : (
 					<PieChart data={selectedData} selectedOption={selectedOption} />
 				)}
